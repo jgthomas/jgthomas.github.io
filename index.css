@@ -10,6 +10,34 @@ body {
         text-align: center;
 }
 
+.project-grid {
+        display: grid;
+        grid-template-areas:
+                "a a a a"
+                "b b b b";
+        grid-gap: 5%;
+        align-items: stretch;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+}
+
+.project-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+}
+
+#row-one {
+        grid-area: a;
+}
+
+#row-two {
+        grid-area: b;
+}
+
 
 /*
  ##Device = Desktops
