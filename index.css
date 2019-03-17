@@ -15,7 +15,7 @@ body {
         grid-template-areas:
                 "a a a a"
                 "b b b b";
-        grid-gap: 5%;
+        grid-gap: 20px;
         align-items: stretch;
         width: 80%;
         margin-right: auto;
