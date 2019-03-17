@@ -41,7 +41,7 @@ body {
         margin-top: 1.25em;
 }
 
-.project:before {
+.project:after {
         content: "";
         float: left;
         padding-bottom: 100%;
