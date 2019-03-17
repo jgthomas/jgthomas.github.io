@@ -35,6 +35,9 @@ body {
         flex-direction: column;
         background-color: ivory;
         color: cornflowerblue;
+        border-radius: 8%;
+        min-width: 500px;
+        max-width: 500px;
 }
 
 #row-one {
