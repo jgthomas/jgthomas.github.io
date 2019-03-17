@@ -10,13 +10,7 @@ body {
 
 
 @media only screen and (max-width: 680px) {
-        .heading {
-                font-size: 400%;
-        }
 }
 
 @media only screen and (max-width: 360px) {
-        .heading {
-                font-size: 400%;
-        }
 }
