@@ -41,6 +41,12 @@ body {
         margin-top: 1.25em;
 }
 
+.project:before {
+        content: "";
+        float: left;
+        padding-top: 100%;
+}
+
 #row-one {
         grid-area: a;
 }
