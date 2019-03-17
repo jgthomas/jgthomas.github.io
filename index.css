@@ -12,9 +12,10 @@ body {
 
 .project-grid {
         display: grid;
-        grid-template-areas:
+        /*grid-template-areas:
                 "a a a a"
-                "b b b b";
+                "b b b b";*/
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 5%;
         align-items: stretch;
         width: 80%;
