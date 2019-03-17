@@ -34,6 +34,7 @@ body {
         display: flex;
         flex-direction: column;
         background-color: ivory;
+        color: cornflowerblue;
 }
 
 #row-one {
