@@ -75,7 +75,7 @@ body {
   ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
-        .project {
+        .project-grid {
                 min-width: 95%;
                 max-width: 95%;
         }
@@ -86,7 +86,7 @@ body {
   ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-        .project {
+        .project-grid {
                 min-width: 95%;
                 max-width: 95%;
         }
