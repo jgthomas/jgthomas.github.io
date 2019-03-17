@@ -55,6 +55,15 @@ body {
         grid-area: b;
 }
 
+/*
+ ##Device = absurdly large monitors
+*/
+@media only screen and (min-width: 2450px) {
+        .project-grid {
+                min-width: 60%;
+                max-width: 60%;
+        }
+}
 
 /*
  ##Device = Desktops
