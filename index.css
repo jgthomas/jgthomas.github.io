@@ -14,8 +14,8 @@ body {
         display: grid;
         grid-template-areas:
                 "a a"
-                "b b";
-                "c c";
+                "b b"
+                "c c"
                 "d d";
         grid-row-gap: 20px;
         grid-column-gap: 20px;
