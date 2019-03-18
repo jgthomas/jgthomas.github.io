@@ -39,7 +39,7 @@ body {
         border-radius: 8%;
         min-width: 500px;
         max-width: 500px;
-        margin-top: 5%;
+        /*margin-top: 5%;*/
 }
 
 .project:after {
