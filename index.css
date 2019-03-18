@@ -13,8 +13,10 @@ body {
 .project-grid {
         display: grid;
         grid-template-areas:
-                "a a a a"
-                "b b b b";
+                "a a"
+                "b b";
+                "c c";
+                "d d";
         grid-row-gap: 20px;
         grid-column-gap: 20px;
         align-items: stretch;
@@ -54,6 +56,14 @@ body {
 
 #row-two {
         grid-area: b;
+}
+
+#row-three {
+        grid-area: c;
+}
+
+#row-four {
+        grid-area: d;
 }
 
 /*
