@@ -122,6 +122,10 @@ body {
   ##Screen = B/w 481px to 767px
 */
 @media (min-width: 481px) and (max-width: 767px) {
+        .project-grid {
+                min-width: 100%;
+                max-width: 100%;
+        }
         .project {
                 min-width: 95%;
                 max-width: 95%;
@@ -133,6 +137,10 @@ body {
   ##Screen = B/w 320px to 479px
 */
 @media (min-width: 320px) and (max-width: 480px) {
+        .project-grid {
+                min-width: 100%;
+                max-width: 100%;
+        }
         .project {
                 min-width: 95%;
                 max-width: 95%;
