@@ -108,6 +108,10 @@ body {
                 min-width: 95%;
                 max-width: 95%;
         }
+        .project {
+                min-width: 80%;
+                max-width: 80%;
+        }
 }
 
 /*
@@ -118,10 +122,6 @@ body {
         .project-grid {
                 min-width: 95%;
                 max-width: 95%;
-        }
-        .project {
-                min-width: 80%;
-                max-width: 80%;
         }
 }
 
