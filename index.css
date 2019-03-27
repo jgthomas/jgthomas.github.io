@@ -10,6 +10,11 @@ body {
         text-align: center;
 }
 
+.tagline {
+        text-align: center;
+        font-style: italic;
+}
+
 .project-grid {
         display: grid;
         grid-template-areas:
