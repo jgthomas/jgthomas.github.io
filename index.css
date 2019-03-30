@@ -3,7 +3,19 @@ body {
         font-size: 16px;
         font-family: 'Roboto', sans-serif;
         background-color: cornflowerblue;
-        color: ivory;
+        color: whitesmoke;
+}
+
+header {
+        width: 60%;
+        margin: auto;
+        margin-top: 0;
+        background-color: whitesmoke;
+        color: cornflowerblue;
+        border-radius: 0 0 2% 2%;
+        /*box-shadow: 5px 5px 5px 5px #ccc;*/
+        padding: 1%;
+        margin-bottom: 5%;
 }
 
 .heading {
@@ -41,9 +53,10 @@ body {
 .project {
         display: flex;
         flex-direction: column;
-        background-color: ivory;
+        background-color: whitesmoke;
         color: cornflowerblue;
-        border-radius: 8%;
+        border-radius: 2%;
+        /*box-shadow: 5px 5px 5px 5px #ccc;*/
         min-width: 45%;
         max-width: 45%;
         margin-top: 20px;
@@ -76,8 +89,11 @@ body {
 */
 @media only screen and (min-width: 2450px) {
         .project-grid {
-                min-width: 60%;
-                max-width: 60%;
+                min-width: 50%;
+                max-width: 50%;
+        }
+        header {
+                width: 40%;
         }
 }
 
@@ -138,6 +154,9 @@ body {
                 min-width: 95%;
                 max-width: 95%;
         }
+        header {
+                width: 90%;
+        }
 }
 
 /*
@@ -152,5 +171,8 @@ body {
         .project {
                 min-width: 95%;
                 max-width: 95%;
+        }
+        header {
+                width: 90%;
         }
 }
