@@ -14,7 +14,6 @@ header {
         background-color: whitesmoke;
         color: cornflowerblue;
         border-radius: 0 0 2% 2%;
-        /*box-shadow: 5px 5px 5px 5px #ccc;*/
         padding: 1%;
         margin-bottom: 2%;
         font-weight: bold;
@@ -73,25 +72,10 @@ nav {
         background-color: whitesmoke;
         color: cornflowerblue;
         border-radius: 2%;
-        /*box-shadow: 5px 5px 5px 5px #ccc;*/
         min-width: 45%;
         max-width: 45%;
         margin-top: 20px;
         align-self: stretch;
-}
-
-/*.project:after {
-        content: "";
-        float: left;
-        padding-bottom: 50%;
-}*/
-
-.code-box {
-        font-family: monospace;
-        color: dimgrey;
-        text-align: left;
-        width: 50%;
-        margin: auto;
 }
 
 .description {
