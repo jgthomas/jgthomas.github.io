@@ -129,6 +129,12 @@ nav {
         margin: auto;
 }
 
+.mid-thumb {
+        max-width: 70%;
+        max-height: 70%;
+        margin: auto;
+}
+
 #row-one {
         grid-area: a;
 }
