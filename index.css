@@ -94,6 +94,12 @@ nav {
         margin: auto;
 }
 
+.description {
+        color: dimgrey;
+        width: 80%;
+        margin: auto;
+}
+
 #row-one {
         grid-area: a;
 }
