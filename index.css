@@ -97,7 +97,22 @@ nav {
 .description {
         color: dimgrey;
         width: 80%;
+        font-size: large;
         margin: auto;
+}
+
+.tech-used {
+        color: dimgrey;
+        width: 70%;
+        margin: auto;
+        text-align: left;
+        font-size: large;
+        font-weight: bold;
+}
+
+.uses-title {
+        color: cornflowerblue;
+        font-size: large;
 }
 
 .thumb {
