@@ -116,6 +116,18 @@ nav {
         font-weight: bold;
 }
 
+.project-nav {
+        margin-bottom: 1em;
+}
+
+.github-link {
+        color: black;
+        font-size: larger;
+        font-family: monospace;
+        outline: none;
+        padding: 1%;
+}
+
 .uses-title {
         color: cornflowerblue;
         font-size: large;
