@@ -1,7 +1,8 @@
 body {
         margin: 0;
         font-size: 16px;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Chivo', sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
         background-color: cornflowerblue;
         color: whitesmoke;
 }
@@ -16,6 +17,7 @@ header {
         /*box-shadow: 5px 5px 5px 5px #ccc;*/
         padding: 1%;
         margin-bottom: 2%;
+        font-weight: bold;
 }
 
 nav {
@@ -32,11 +34,13 @@ nav {
 
 .heading {
         text-align: center;
+        font-weight: bolder;
 }
 
 .tagline {
         text-align: center;
         font-style: italic;
+        font-weight: normal;
 }
 
 .project-grid {
@@ -126,7 +130,7 @@ nav {
                 max-width: 95%;
         }
         header {
-                width: 95%;
+                width: 90%;
         }
 }
 
@@ -144,7 +148,7 @@ nav {
                 max-width: 80%;
         }
         header {
-                width: 80%;
+                width: 75%;
         }
 }
 
@@ -158,7 +162,7 @@ nav {
                 max-width: 95%;
         }
         header {
-                width: 95%;
+                width: 90%;
         }
 }
 
