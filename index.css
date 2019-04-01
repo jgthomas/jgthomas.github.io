@@ -97,8 +97,13 @@ nav {
 .description {
         color: dimgrey;
         width: 80%;
-        font-size: large;
+        font-size: larger;
         margin: auto;
+}
+
+.emphasis {
+        font-weight: bold;
+        color: cornflowerblue;
 }
 
 .tech-used {
