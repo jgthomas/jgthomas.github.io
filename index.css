@@ -123,6 +123,12 @@ nav {
         margin: auto;
 }
 
+.smaller-thumb {
+        max-width: 60%;
+        max-height: 60%;
+        margin: auto;
+}
+
 #row-one {
         grid-area: a;
 }
