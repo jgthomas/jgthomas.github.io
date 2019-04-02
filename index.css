@@ -235,14 +235,14 @@ nav {
 */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
         .project-grid {
-                min-width: 100%;
-                max-width: 100%;
+                min-width: 95%;
+                max-width: 95%;
         }
         header {
-                width: 95%;
+                width: 90%;
         }
         .feature-list {
-                width: 70%;
+                width: 80%;
         }
 }
 
