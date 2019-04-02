@@ -119,6 +119,7 @@ nav {
 }
 
 .feature-list-title {
+        color: cornflowerblue;
         list-style: none;
         font-weight: bold;
 }
@@ -128,7 +129,6 @@ nav {
         margin: auto;
         text-align: left;
         margin-bottom: 1em;
-        margin-top: 2em;
 }
 
 .thumb {
