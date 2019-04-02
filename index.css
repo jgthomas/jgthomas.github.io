@@ -125,7 +125,7 @@ nav {
 }
 
 .feature-list {
-        width: 70%;
+        width: 50%;
         margin: auto;
         text-align: left;
         margin-bottom: 1em;
@@ -241,6 +241,9 @@ nav {
         header {
                 width: 90%;
         }
+        .feature-list {
+                width: 60%;
+        }
 }
 
 /*
@@ -258,6 +261,9 @@ nav {
         }
         header {
                 width: 95%;
+        }
+        .feature-list {
+                width: 70%;
         }
 }
 
@@ -280,6 +286,9 @@ nav {
         nav {
                 margin-top: 1em;
         }
+        .feature-list {
+                width: 70%;
+        }
 }
 
 /*
@@ -299,5 +308,8 @@ nav {
         }
         nav {
                 margin-top: 1em;
+        }
+        .feature-list {
+                width: 80%;
         }
 }
