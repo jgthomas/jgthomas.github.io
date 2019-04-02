@@ -118,9 +118,28 @@ nav {
         font-size: large;
 }
 
+.feature-list-title {
+        list-style: none;
+        font-weight: bold;
+}
+
+.feature-list {
+        width: 50%;
+        margin: auto;
+        text-align: left;
+        margin-bottom: 1em;
+        margin-top: 2em;
+}
+
 .thumb {
         max-width: 90%;
         max-height: 90%;
+        margin: auto;
+}
+
+.smallest-thumb {
+        max-width: 50%;
+        max-height: 50%;
         margin: auto;
 }
 
