@@ -32,6 +32,10 @@ nav {
         padding: 1%;
 }
 
+.section-link:hover {
+        color: dodgerblue;
+}
+
 .heading {
         text-align: center;
         font-weight: bolder;
