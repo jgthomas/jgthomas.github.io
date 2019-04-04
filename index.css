@@ -32,14 +32,6 @@ nav {
         padding: 1%;
 }
 
-.section-link:hover {
-        color: dodgerblue;
-}
-
-.section-link:active {
-        color: dimgrey;
-}
-
 .heading {
         text-align: center;
         font-weight: bolder;
@@ -321,5 +313,11 @@ nav {
         }
         .feature-list {
                 width: 80%;
+        }
+}
+
+@media (hover:hover) {
+        .section-link:hover {
+                color: dodgerblue;
         }
 }
