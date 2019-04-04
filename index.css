@@ -28,7 +28,7 @@ nav {
 .section-link {
         text-decoration: none;
         outline: none;
-        color: dodgerblue;
+        color: dimgrey;
         padding: 1%;
 }
 
@@ -41,6 +41,7 @@ nav {
         text-align: center;
         font-style: italic;
         font-weight: normal;
+        color: dimgrey;
 }
 
 .project-grid {
