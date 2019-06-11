@@ -8,7 +8,7 @@ html, body {
         color: whitesmoke;
 }
 
-header {
+.full-width {
         width: 75%;
         margin: auto;
         margin-top: 0;
@@ -190,6 +190,15 @@ nav {
         grid-area: e;
 }
 
+
+.about-text {
+        color: dimgrey;
+        min-width: 60%;
+        max-width: 60%;
+        margin: auto;
+}
+
+
 /*
  ##Device = absurdly large monitors
 */
@@ -198,7 +207,7 @@ nav {
                 min-width: 50%;
                 max-width: 50%;
         }
-        header {
+        .full-width {
                 width: 45%;
         }
 }
@@ -219,7 +228,7 @@ nav {
                 min-width: 95%;
                 max-width: 95%;
         }
-        header {
+        .full-width {
                 width: 90%;
         }
 }
@@ -237,7 +246,7 @@ nav {
                 min-width: 80%;
                 max-width: 80%;
         }
-        header {
+        .full-width {
                 width: 75%;
         }
 }
@@ -251,7 +260,7 @@ nav {
                 min-width: 95%;
                 max-width: 95%;
         }
-        header {
+        .full-width {
                 width: 90%;
         }
         .feature-list {
@@ -272,7 +281,7 @@ nav {
                 min-width: 95%;
                 max-width: 95%;
         }
-        header {
+        .full-width {
                 width: 95%;
         }
         .feature-list {
@@ -293,7 +302,7 @@ nav {
                 min-width: 95%;
                 max-width: 95%;
         }
-        header {
+        .full-width {
                 width: 95%;
         }
         nav {
@@ -316,7 +325,7 @@ nav {
                 min-width: 90%;
                 max-width: 90%;
         }
-        header {
+        .full-width {
                 width: 90%;
         }
         nav {
