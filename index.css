@@ -50,7 +50,8 @@ nav {
                 "a a"
                 "b b"
                 "c c"
-                "d d";
+                "d d"
+                "e e";
         grid-row-gap: 20px;
         grid-column-gap: 20px;
         align-items: stretch;
@@ -177,6 +178,10 @@ nav {
 
 #row-four {
         grid-area: d;
+}
+
+#row-five {
+        grid-area: e;
 }
 
 /*
