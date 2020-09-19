@@ -32,6 +32,11 @@ nav {
         padding: 1%;
 }
 
+.proj-link {
+        text-decoration: none;
+        outline: none;
+}
+
 .heading {
         text-align: center;
         font-weight: bolder;
