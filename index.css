@@ -70,30 +70,23 @@ nav {
         color: orangered;
 }
 
-.project-grid {
+.main-grid {
         display: grid;
-        grid-template-areas:
-                "a a"
-                "b b"
-                "c c"
-                "d d"
-                "e e";
-        grid-row-gap: 20px;
-        grid-column-gap: 20px;
-        align-items: stretch;
-        width: 80%;
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 2em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-row-gap: 5%;
 }
 
-.project-row {
-        display: flex;
-        flex-wrap: wrap;
+.project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 40%);
+        grid-row-gap: 1%;
+        grid-column-gap: 1%;
         align-items: center;
-        align-items: flex-start;
-        justify-content: space-around;
-        text-align: center;
+        justify-items: center;
+        justify-content: space-evenly;
+        width: 90%;
+        margin: auto;
 }
 
 .project {
@@ -102,8 +95,8 @@ nav {
         background-color: whitesmoke;
         color: cornflowerblue;
         border-radius: 2%;
-        min-width: 45%;
-        max-width: 45%;
+        min-width: 95%;
+        max-width: 95%;
         margin-top: 20px;
         align-self: stretch;
 }
@@ -195,27 +188,6 @@ nav {
         max-height: 80%;
         margin: auto;
 }
-
-#row-one {
-        grid-area: a;
-}
-
-#row-two {
-        grid-area: b;
-}
-
-#row-three {
-        grid-area: c;
-}
-
-#row-four {
-        grid-area: d;
-}
-
-#row-five {
-        grid-area: e;
-}
-
 
 .about-text {
         color: dimgrey;
