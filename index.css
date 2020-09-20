@@ -38,37 +38,30 @@ nav {
 }
 
 #search-bar {
-    width: 50%;
-    padding: 2%;
-    font-size: 1.15em;
-    margin: auto;
-    margin-bottom: auto;
-    display: block;
-    margin-bottom: 1.15em;
-    color: cornflowerblue;
-    border-radius: 25px;
-    border: none;
-    text-decoration: none;
+        width: 50%;
+        padding: 2%;
+        font-size: 1.15em;
+        margin: auto;
+        margin-bottom: auto;
+        display: block;
+        margin-bottom: 1.15em;
+        color: cornflowerblue;
+        border-radius: 25px;
+        border: none;
+        text-decoration: none;
 }
 
 .hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0;
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px; width: 1px;
+        margin: -1px; padding: 0; border: 0;
 }
 
 .heading {
         text-align: center;
         font-weight: bolder;
-}
-
-.tagline {
-        text-align: center;
-        font-style: italic;
-        font-weight: normal;
-        color: dimgrey;
 }
 
 .notice {
@@ -345,6 +338,10 @@ nav {
         .feature-list {
                 width: 70%;
         }
+        #search-bar {
+                width: 75%;
+                margin: auto;
+        }
 }
 
 /*
@@ -367,6 +364,10 @@ nav {
         }
         .feature-list {
                 width: 80%;
+        }
+        #search-bar {
+                width: 75%;
+                margin: auto;
         }
 }
 
