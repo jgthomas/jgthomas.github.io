@@ -239,6 +239,7 @@ nav {
         .project-grid {
                 min-width: 95%;
                 max-width: 95%;
+                grid-template-columns: repeat(auto-fill, 95%);
         }
         .project {
                 min-width: 80%;
@@ -261,6 +262,7 @@ nav {
         .project-grid {
                 min-width: 95%;
                 max-width: 95%;
+                grid-template-columns: repeat(auto-fill, 95%);
         }
         .full-width {
                 width: 90%;
@@ -282,6 +284,7 @@ nav {
         .project-grid {
                 min-width: 100%;
                 max-width: 100%;
+                grid-template-columns: repeat(auto-fill, 95%);
         }
         .project {
                 min-width: 95%;
@@ -307,6 +310,7 @@ nav {
         .project-grid {
                 min-width: 100%;
                 max-width: 100%;
+                grid-template-columns: repeat(auto-fill, 95%);
         }
         .project {
                 min-width: 95%;
@@ -336,6 +340,7 @@ nav {
         .project-grid {
                 min-width: 100%;
                 max-width: 100%;
+                grid-template-columns: repeat(auto-fill, 95%);
         }
         .project {
                 min-width: 90%;
