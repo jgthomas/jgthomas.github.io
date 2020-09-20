@@ -42,11 +42,10 @@ nav {
         padding: 2%;
         font-size: 1.15em;
         margin: auto;
-        margin-bottom: auto;
         display: block;
         margin-bottom: 1.15em;
         color: cornflowerblue;
-        border-radius: 25px;
+        border-radius: 2%;
         border: none;
         text-decoration: none;
 }
@@ -276,6 +275,10 @@ nav {
         .full-width {
                 width: 75%;
         }
+        #search-bar {
+                margin: auto;
+                padding: 3%;
+        }
 }
 
 /*
@@ -292,6 +295,10 @@ nav {
         }
         .feature-list {
                 width: 80%;
+        }
+        #search-bar {
+                margin: auto;
+                padding: 3%;
         }
 }
 
@@ -313,6 +320,10 @@ nav {
         }
         .feature-list {
                 width: 70%;
+        }
+        #search-bar {
+                margin: auto;
+                padding: 5%;
         }
 }
 
@@ -341,6 +352,8 @@ nav {
         #search-bar {
                 width: 75%;
                 margin: auto;
+                margin-top: 1em;
+                padding: 5%;
         }
 }
 
@@ -368,6 +381,8 @@ nav {
         #search-bar {
                 width: 75%;
                 margin: auto;
+                margin-top: 1em;
+                padding: 5%;
         }
 }
 
