@@ -159,42 +159,14 @@ nav {
 }
 
 .project-image {
+        max-width: 60%;
+        height: auto;
+        padding: 20px;
         margin: auto;
 }
 
-.mini-thumb {
-        max-width: 10%;
-        height: auto;
-}
-
-.big-mini-thumb {
-        max-width: 40%;
-        height: auto;
-}
-
-.smallest-thumb {
+.project-image-tall {
         max-width: 50%;
-        height: auto;
-}
-
-.smaller-thumb {
-        max-width: 60%;
-        height: auto;
-}
-
-.mid-thumb {
-        max-width: 70%;
-        height: auto;
-}
-
-.double-mid-thumb {
-        max-width: 80%;
-        height: auto;
-}
-
-.thumb {
-        max-width: 90%;
-        height: auto;
 }
 
 .about-text {
