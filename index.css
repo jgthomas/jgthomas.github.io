@@ -131,6 +131,7 @@ nav {
 }
 
 .status-line {
+        align-self: end;
         color: darkslategrey;
         font-size: large;
         margin-top: 20px;
