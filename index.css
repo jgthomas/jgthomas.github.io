@@ -152,6 +152,9 @@ nav {
         font-weight: bold;
 }
 
+.year {
+}
+
 .status-line {
         align-self: end;
         color: darkslategrey;

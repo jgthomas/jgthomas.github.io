@@ -1,7 +1,7 @@
 
 
 const projectName = (project) => {
-        return project.querySelector('.heading').textContent.toLowerCase();
+    return project.querySelector('.heading').textContent.toLowerCase();
 }
 
 
@@ -29,11 +29,17 @@ const projectTech = (project) => {
 }
 
 
+const projectYear = (project) => {
+    return project.querySelector('.year').textContent.toLowerCase();
+}
+
+
 const projectSearchData = (project) => {
     const name = projectName(project);
     const description = projectDescription(project);
     const tech = projectTech(project);
-    return `${name}${description}${tech}`
+    const year = projectYear(project);
+    return `${name}${description}${tech}${year}`
 }
 
 
