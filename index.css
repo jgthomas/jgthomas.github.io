@@ -37,6 +37,11 @@ nav {
         outline: none;
 }
 
+.search-form {
+        width: 90%;
+        margin: auto;
+}
+
 #search-bar {
         width: 50%;
         padding: 20px;
