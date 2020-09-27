@@ -5,6 +5,19 @@ const projectName = (project) => {
 }
 
 
+const projectDescription = (project) => {
+    let description = '';
+    const descriptionLines = project.querySelector('.description').childNodes;
+
+    for (const descRow of descriptionLines) {
+        description += descRow.textContent.toLowerCase();
+    }
+
+    console.log(description);
+    return description;
+}
+
+
 const projectTech = (project) => {
     let techString = '';
     const projectTech = project.querySelectorAll('.tech-used');
@@ -19,8 +32,9 @@ const projectTech = (project) => {
 
 const projectSearchData = (project) => {
     const name = projectName(project);
+    const description = projectDescription(project);
     const tech = projectTech(project);
-    return `${name}${tech}`
+    return `${name}${description}${tech}`
 }
 
 
