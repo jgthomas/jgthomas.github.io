@@ -130,6 +130,14 @@ nav {
         font-weight: bold;
 }
 
+.status-line {
+        color: darkslategrey;
+        font-size: large;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+}
+
 .project-nav {
         margin-bottom: 1em;
 }
@@ -139,6 +147,10 @@ nav {
         font-size: larger;
         font-family: monospace;
         outline: none;
+}
+
+.link-image {
+        width: 26px;
 }
 
 .uses-title {
