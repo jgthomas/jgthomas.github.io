@@ -38,7 +38,11 @@ nav {
 }
 
 .search-form {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
         width: 90%;
+        height: auto;
         margin: auto;
         text-align: center;
 }
@@ -54,6 +58,18 @@ nav {
         border-radius: 2%;
         border: none;
         text-decoration: none;
+}
+
+.clear-button {
+        text-decoration: none;
+        padding: 5px;
+        font-size: large;
+        border: none;
+        color: cornflowerblue;
+        background-color: whitesmoke;
+        -webkit-appearance: none;
+        border-radius: 5px;
+        margin: auto;
 }
 
 .hidden {
@@ -248,9 +264,6 @@ nav {
         .full-width {
                 width: 75%;
         }
-        #search-bar {
-                margin: auto;
-        }
 }
 
 /*
@@ -268,9 +281,6 @@ nav {
         }
         .feature-list {
                 width: 80%;
-        }
-        #search-bar {
-                margin: auto;
         }
 }
 
@@ -293,9 +303,6 @@ nav {
         }
         .feature-list {
                 width: 70%;
-        }
-        #search-bar {
-                margin: auto;
         }
 }
 
@@ -324,7 +331,6 @@ nav {
         }
         #search-bar {
                 width: 75%;
-                margin: auto;
                 margin-top: 1em;
         }
 }
@@ -353,7 +359,6 @@ nav {
         }
         #search-bar {
                 width: 75%;
-                margin: auto;
                 margin-top: 1em;
         }
 }
