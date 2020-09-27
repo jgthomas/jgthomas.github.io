@@ -37,8 +37,7 @@ const projectSearchData = (project) => {
 }
 
 
-const searchNoteList = () => {
-    const searchTerm = document.getElementById("search-bar").value.toLowerCase().trim();
+const searchNoteList = (searchTerm) => {
     const projects = document.getElementsByClassName('project');
 
     for (const project of projects) {
@@ -47,7 +46,7 @@ const searchNoteList = () => {
         if (projectString.indexOf(searchTerm) > -1) {
             showNode(project);
         } else {
-            project.classList.add('hidden');
+            hideNode(project);
         }
     }
 }
@@ -84,16 +83,21 @@ const showAllProjects = () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("search-bar").addEventListener("input", () => {
-        showResetButton();
-        searchNoteList();
+    const searchBox = document.getElementById("search-bar");
+    searchBox.addEventListener("input", () => {
+        const searchTerm = searchBox.value.toLowerCase().trim();
+        if (!searchTerm) {
+            hideResetButton();
+        } else {
+            showResetButton();
+            searchNoteList(searchTerm);
+        }
     });
 });
 
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("clear-button").addEventListener("click", () => {
-        console.log('WUT');
         showAllProjects();
         hideResetButton();
     });
