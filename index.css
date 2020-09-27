@@ -165,17 +165,6 @@ nav {
         justify-content: space-around;
 }
 
-.project-nav {
-        margin-bottom: 1em;
-}
-
-.github-link {
-        color: black;
-        font-size: larger;
-        font-family: monospace;
-        outline: none;
-}
-
 .link-image {
         width: 26px;
 }
