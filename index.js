@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const searchTerm = searchBox.value.toLowerCase().trim();
         if (!searchTerm) {
             hideResetButton();
+            showAllProjects();
         } else {
             showResetButton();
             searchNoteList(searchTerm);
