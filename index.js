@@ -50,9 +50,6 @@ const searchNoteList = () => {
             project.classList.add('hidden');
         }
     }
-
-    if (!searchTerm) {
-    }
 }
 
 
@@ -62,7 +59,7 @@ const showNode = (project) => {
 
 
 const hideNode = (node) => {
-    node.classList.remove('hidden');
+    node.classList.add('hidden');
 }
 
 
@@ -95,5 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("clear-button").addEventListener("reset", showAllProjects);
+    document.getElementById("clear-button").addEventListener("click", () => {
+        console.log('WUT');
+        showAllProjects();
+        hideResetButton();
+    });
 });
