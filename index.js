@@ -38,22 +38,25 @@ const projectSearchData = (project) => {
 
 
 const searchNoteList = () => {
-    const searchTerm = document.getElementById("search-bar").value.toLowerCase();
+    const searchTerm = document.getElementById("search-bar").value.toLowerCase().trim();
     const projects = document.getElementsByClassName('project');
 
     for (const project of projects) {
         const projectString = projectSearchData(project);
 
         if (projectString.indexOf(searchTerm) > -1) {
-            showProject(project);
+            showNode(project);
         } else {
             project.classList.add('hidden');
         }
     }
+
+    if (!searchTerm) {
+    }
 }
 
 
-const showProject = (project) => {
+const showNode = (project) => {
     project.classList.remove('hidden');
 }
 
@@ -63,16 +66,29 @@ const hideNode = (node) => {
 }
 
 
+const hideResetButton = () => {
+    const resetButton = document.getElementById("clear-button");
+    hideNode(resetButton);
+}
+
+
+const showResetButton = () => {
+    const resetButton = document.getElementById("clear-button");
+    showNode(resetButton);
+}
+
+
 const showAllProjects = () => {
     const projects = document.getElementsByClassName('project');
-    projects.forEach((project) => { showProject(project) });
+    for (const project of projects) {
+        showNode(project);
+    }
 }
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const clearButton = document.getElementById("clear-button");
     document.getElementById("search-bar").addEventListener("input", () => {
-        showProject(clearButton);
+        showResetButton();
         searchNoteList();
     });
 });
