@@ -43,7 +43,7 @@ const projectSearchData = (project) => {
 }
 
 
-const searchNoteList = (searchTerm) => {
+const searchProjects = (searchTerm) => {
     const projects = document.getElementsByClassName('project');
 
     for (const project of projects) {
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
             hideResetButton();
         } else {
             showResetButton();
-            searchNoteList(searchTerm);
+            searchProjects(searchTerm);
         }
     });
 });
