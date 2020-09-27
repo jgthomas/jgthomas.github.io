@@ -13,7 +13,6 @@ const projectDescription = (project) => {
         description += descRow.textContent.toLowerCase();
     }
 
-    console.log(description);
     return description;
 }
 
@@ -46,7 +45,7 @@ const searchNoteList = () => {
         const projectString = projectSearchData(project);
 
         if (projectString.indexOf(searchTerm) > -1) {
-            project.classList.remove('hidden');
+            showProject(project);
         } else {
             project.classList.add('hidden');
         }
@@ -54,6 +53,31 @@ const searchNoteList = () => {
 }
 
 
+const showProject = (project) => {
+    project.classList.remove('hidden');
+}
+
+
+const hideNode = (node) => {
+    node.classList.remove('hidden');
+}
+
+
+const showAllProjects = () => {
+    const projects = document.getElementsByClassName('project');
+    projects.forEach((project) => { showProject(project) });
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("search-bar").addEventListener("input", searchNoteList);
+    const clearButton = document.getElementById("clear-button");
+    document.getElementById("search-bar").addEventListener("input", () => {
+        showProject(clearButton);
+        searchNoteList();
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("clear-button").addEventListener("reset", showAllProjects);
 });
