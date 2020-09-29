@@ -1,20 +1,44 @@
 <!DOCTYPE html>
   <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
     <meta charset="utf-8" />
-    <meta name="image" property="og:image" content="https://jgthomas.github.io/images/jgthomas_github_io.png" />
-    <meta property="og:type" content="website" />
-    <meta name="description" content="Portfolio of my personal projects">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Chivo|Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="index.css">
   </head>
   <body>
+    <script id="project-template-list" type="text/x-mustache-template">
+      {{#projects}}
+        <div id="{{name}}" class="project">
+          <h2 class="heading">{{name}}</h2>
+          <div class="description">
+            <p>{{description}}</p>
+            <div class="feature-list">
+              {{#features}}<li>{{.}}</li>{{/features}}
+            </div>
+          </div>
+          <img class="project-image" src="{{image}}">
+          <div class="tech-used">
+            <p><span class="uses-title">Languages: </span>{{languages}}</p>
+            <p><span class="uses-title">Tools: </span>{{tools}}</p>
+            <p><span class="uses-title">Build: </span>{{build}}</p>
+          </div>
+          <div class="status-line">
+            <div class="year">{{year}}</div>
+            <div>
+              <img src="{{midlink}}" />
+            </div>
+            <div>
+              <a href="{{github}}">
+                <img class="link-image" alt="GitHub" src="{{octocat}}"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      {{/projects}}
+    </script>
+    <script src="https://unpkg.com/mustache@latest"></script>
+    <script type="module" src="renderProjects.js"></script>
+    <script type="module" src="search.js"></script>
     <header class="full-width">
       <h1 class="heading">The Late Developer</h1>
       <nav>
@@ -27,282 +51,22 @@
       <input type="text" id="search-bar" placeholder="search projects...">
       <input id="clear-button" class="clear-button hidden" type="reset" value="Clear">
     </form>
-    <div class="main-grid">
-    <div id="all-projects" class="project-grid">
-        <div class="project">
-          <h2 class="heading">succ</h2>
-          <div class="description">
-            <p>Compiler for a (growing!) subset of C. Compiles to x86-64 assembly.</p>
-          </div>
-          <img class="project-image" src="images/succ.png" alt="succ">
-          <div class="tech-used">
-            <p><span class="uses-title">Language: </span>Haskell</p>
-            <p><span class="uses-title">Tools: </span>Hspec, Hlint, stylish-haskell</p>
-            <p><span class="uses-title">Build: </span>Stack, Travis CI, Codecov</p>
-          </div>
-          <div class="status-line">
-            <div class="year">2019</div>
-            <div>
-              <img src="https://travis-ci.com/jgthomas/succ.svg?branch=master" />
-            </div>
-            <div>
-              <a href="https://github.com/jgthomas/succ">
-                <img class="link-image"
-                     alt="GitHub"
-                     src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"
-                     />
-              </a>
-            </div>
-          </div>
+    <div class-"main-grid">
+      <div id="all-projects" class="project-grid"></div>
+      <div id="me" class="full-width me-grid">
+        <h2 class="heading">Me</h1>
+        <div class="about-text">
+          <p>Reader, I pivoted.</p>
+          <p>After spending much time somewhere between the arts and the sciences,
+             I decided to learn a craft. This site represents the fruits of my apprenticeship thus far.</p>
+          <p>I first encountered programming during my journey around the foothills of academia.
+             Actually, this is not entirely true. I played with Visual Basic as a child,
+             getting up early to shift elements around. Somehow, though, it didn't 'stick'.</p>
+          <p>It has been my fortune, therefore, to pick up a child-like obsession
+             with programming and computer science as an adult, with all the
+             advantages and disadvantages that come with that timing.</p>
         </div>
-        <div class="project">
-          <h2 class="heading">braingame.xyz</h2>
-          <div class="description">
-            <p>Brain game website: anagrams, sudoku, and more.</p>
-          </div>
-          <img class="project-image" src="images/braingame_menu.png" alt="braingame screenshot">
-          <div class="tech-used">
-            <p><span class="uses-title">Languages: </span>Python, JavaScript, CSS, HTML</p>
-            <p><span class="uses-title">Tools: </span>Flask, Flake8, Black, pre-commit, React, JSLint, Prettier, Docker</p>
-            <p><span class="uses-title">Build: </span>Poetry, Yarn, Travis CI, Codecov, Docker Hub, AWS Elastic Beanstalk</p>
-          </div>
-          <div class="status-line">
-            <div class="year">2020</div>
-            <div>
-              <img src="https://travis-ci.com/jgthomas/braingame.xyz.svg?branch=master" />
-            </div>
-            <div>
-              <a href="https://github.com/jgthomas/braingame.xyz">
-                <img class="link-image"
-                     alt="GitHub"
-                     src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"
-                     />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <h2 class="heading">draughts</h2>
-          <div class="description">
-            <p>Desktop draughts application. Human and computer players, in graphical or text mode.</p>
-          </div>
-          <img class="project-image" src="images/draughts.png" alt="draughts screenshot">
-          <div class="tech-used">
-            <p><span class="uses-title">Languages: </span>Java, SQL</p>
-            <p><span class="uses-title">Tools: </span>JavaFX, JUnit, SQLite</p>
-            <p><span class="uses-title">Build: </span>Maven, Travis CI</p>
-          </div>
-          <div class="status-line">
-            <div class="year">2018</div>
-            <div>
-              <img src="https://travis-ci.com/jgthomas/DraughtsGame.svg?branch=master" />
-            </div>
-            <div>
-              <a href="https://github.com/jgthomas/DraughtsGame">
-                <img class="link-image"
-                     alt="GitHub"
-                     src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"
-                     />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <h2 class="heading">calcasm</h2>
-          <div class="description">
-            <p>Command line calculator written in pure x86-64 assembly.</p>
-          </div>
-          <img class="project-image project-image-tall" src="images/calcasm.png" alt="calcasm icon">
-          <div class="tech-used">
-            <p><span class="uses-title">Language: </span>x86-64 Assembly</p>
-            <p><span class="uses-title">Tools: </span>as, ld, GDB</p>
-            <p><span class="uses-title">Build: </span>Make, Travis CI</p>
-          </div>
-          <div class="status-line">
-            <div class="year">2018</div>
-            <div>
-              <img src="https://travis-ci.com/jgthomas/calcasm.svg?branch=master" />
-            </div>
-            <div>
-              <a href="https://github.com/jgthomas/calcasm">
-                <img class="link-image"
-                     alt="GitHub"
-                     src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"
-                     />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <h2 class="heading">self.site</h2>
-          <div class="description">
-            <p>Portfolio website built with just the bare-bones tech of the web.</p>
-          </div>
-          <img class="project-image" src="images/jgthomas_github_io.png" alt="site screenshot">
-          <div class="tech-used">
-            <p><span class="uses-title">Languages: </span>JavaScript, CSS, HTML</p>
-            <p><span class="uses-title">Tools: </span>Grid, Flexbox, media queries</p>
-            <p><span class="uses-title">Build: </span>git push!</p>
-          </div>
-          <div class="status-line">
-            <div class="year">2019</div>
-            <div>
-              <a href="https://github.com/jgthomas/jgthomas.github.io">
-                <img class="link-image"
-                     alt="GitHub"
-                     src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"
-                     />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <h2 class="heading">emulator</h2>
-          <div class="description">
-            <p>Emulator for 4-bit and 8-bit chipsets.</p>
-            <ul class="feature-list">
-              <li>Interactive shell</li>
-              <li>Simple debugger</li>
-              <li>Run program from file</li>
-              <li>Own assembly language</li>
-              <li>Simple assembler</li>
-            </ul>
-          </div>
-          <img class="project-image project-image-tall" src="images/cpu.png" alt="cpu icon">
-          <div class="tech-used">
-            <p><span class="uses-title">Language: </span>C</p>
-            <p><span class="uses-title">Tools: </span>cmocka, GDB, Valgrind</p>
-            <p><span class="uses-title">Build: </span>Make, Travis CI</p>
-          </div>
-          <div class="status-line">
-            <div class="year">2018</div>
-            <div>
-              <img src="https://travis-ci.com/jgthomas/chipset_emulator.svg?branch=master" />
-            </div>
-            <div>
-              <a href="https://github.com/jgthomas/chipset_emulator">
-                <img class="link-image"
-                     alt="GitHub"
-                     src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"
-                     />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <h2 class="heading">piptube</h2>
-          <div class="description">
-            <p>Picture-in-picture video for YouTube. Turns YouTube into a command-line video and audio jukebox.</p>
-          </div>
-          <img class="project-image" src="images/piptube.png" alt="piptube screenshot">
-          <div class="tech-used">
-            <p><span class="uses-title">Language: </span>Python</p>
-            <p><span class="uses-title">Tools: </span>youtube-dl, mpv</p>
-            <p><span class="uses-title">Build: </span>Poetry</p>
-          </div>
-          <div class="status-line">
-            <div class="year">2017</div>
-            <div>
-              <a href="https://aur.archlinux.org/packages/piptube">
-                <img class="link-image"
-                     alt="Arch"
-                     src="https://raw.githubusercontent.com/lukas-w/font-logos/master/vectors/archlinux.svg"
-                     />
-              </a>
-            </div>
-            <div>
-              <a href="https://github.com/jgthomas/piptube">
-                <img class="link-image"
-                     alt="GitHub"
-                     src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"
-                     />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <h2 class="heading">headlinewords.top</h2>
-          <div class="description">
-            <p>Tracks the daily, weekly, and monthly trends in the words used in news headlines.</p>
-          </div>
-          <img class="project-image" src="images/headline-words.png" alt="headlinewords screenshot">
-          <div class="tech-used">
-            <p><span class="uses-title">Languages: </span>Python, SQL, CSS, HTML</p>
-            <p><span class="uses-title">Tools: </span>Flask, SQLite</p>
-            <p><span class="uses-title">Build: </span>pip, virtualenv, DigitalOcean, NGINX, Let's Encypt</p>
-          </div>
-          <div class="status-line">
-            <div class="year">2017</div>
-            <div>
-              <a href="https://github.com/jgthomas/headlinewords.top">
-                <img class="link-image"
-                     alt="GitHub"
-                     src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"
-                     />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <h2 class="heading">sudoku solver</h2>
-          <div class="description">
-            <p>Sudoku solver written in C, and then compiled to webassembly.</p>
-          </div>
-          <img class="project-image" src="images/sudoku.png" alt="sudoku screenshot">
-          <div class="tech-used">
-            <p><span class="uses-title">Languages: </span>C, JavaScript, CSS, HTML</p>
-            <p><span class="uses-title">Tools: </span>WebAssembly</p>
-            <p><span class="uses-title">Build: </span>Emscripten</p>
-          </div>
-          <div class="status-line">
-            <div class="year">2018</div>
-            <div>
-              <a href="https://github.com/jgthomas/sudoku-solver.online">
-                <img class="link-image"
-                     alt="GitHub"
-                     src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"
-                     />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <h2 class="heading">pyfunctory</h2>
-          <div class="description">
-            <p>Pythonic functional programming library.</p>
-          </div>
-          <img class="project-image project-image-tall" src="images/lambda.png" alt="lambda">
-          <div class="tech-used">
-            <p><span class="uses-title">Language: </span>Python</p>
-            <p><span class="uses-title">Tools: </span>pytest, Flake8, Black</p>
-            <p><span class="uses-title">Build: </span>Poetry, Travis CI, Codecov</p>
-          </div>
-          <div class="status-line">
-            <div class="year">2017</div>
-            <div>
-              <img src="https://travis-ci.com/jgthomas/pyfunctory.svg?branch=master" />
-            </div>
-            <div>
-              <a href="https://github.com/jgthomas/pyfunctory">
-                <img class="link-image"
-                     alt="GitHub"
-                     src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png"
-                     />
-              </a>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div id="me" class="full-width me-grid">
-      <h2 class="heading">Me</h1>
-      <div class="about-text">
-        <p>Reader, I pivoted.</p>
-        <p>After spending much time somewhere between the arts and the sciences, I decided to learn a craft. This site represents the fruits of my apprenticeship thus far.</p>
-        <p>I first encountered programming during my journey around the foothills of academia. Actually, this is not entirely true. I played with Visual Basic as a child, getting up early to shift elements around. Somehow, though, it didn't 'stick'.</p>
-        <p>It has been my fortune, therefore, to pick up a child-like obsession with programming and computer science as an adult, with all the advantages and disadvantages that come with that timing.</p>
       </div>
     </div>
-    </div>
-    <script src="index.js"></script>
   </body>
 </html>
