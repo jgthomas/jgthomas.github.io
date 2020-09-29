@@ -191,12 +191,12 @@ export const projectData = (name) => {
     const features = data.features ? data.features.join(", ") : "";
 
     return `${data.name}
-             ${data.description}
-             ${features}
-             ${data.languages}
-             ${data.tools}
-             ${data.build}
-             ${data.year}
+            ${data.description}
+            ${features}
+            ${data.languages}
+            ${data.tools}
+            ${data.build}
+            ${data.year}
            `.toLowerCase()
 }
 
