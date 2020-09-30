@@ -4,32 +4,8 @@ import { langs, tools, build } from "./tech.js";
 
 const octocat = "https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png";
 
-const buildCiLink = (name) => {
-    return `https://travis-ci.com/jgthomas/${name}.svg?branch=master`
-}
-
-const buildRepoLink = (project) => {
-    const repoName = project.altName ? project.altName : project.name;
-    return `https://github.com/jgthomas/${repoName}`
-}
-
-const buildImageName = (name) => {
-    return `images/${name.replaceAll(" ", "_")}.png`
-}
-
-
-const buildProject = (project) => {
-    project.image = buildImageName(project.name);
-    project.languages = project.languageList.join(", ");
-    project.tools = project.toolList.join(", ");
-    project.build = project.buildList.join(", ");
-    project.midlink = buildCiLink(project.name);
-    project.github = buildRepoLink(project);
-    project.octocat = octocat;
-}
-
-
 const succ = {
+    ci: true,
     name: "succ",
     description: "Compiler for a (growing!) subset of C. Compiles to x86-64 assembly.",
     languageList: [langs.haskell],
@@ -38,10 +14,8 @@ const succ = {
     year: "2019",
 }
 
-buildProject(succ);
-
-
 const pyfunctory = {
+    ci: true,
     name: "pyfunctory",
     description: "Pythonic implementations of functional programming concepts.",
     languageList: [langs.python],
@@ -50,10 +24,8 @@ const pyfunctory = {
     year: "2017",
 }
 
-buildProject(pyfunctory);
-
-
 const sudoku = {
+    ci: false,
     name: "sudoku solver",
     altName: "sudoku-solver.online",
     description: "Sudoku solver written in C, and then compiled to webassembly.",
@@ -63,11 +35,8 @@ const sudoku = {
     year: "2018",
 }
 
-buildProject(sudoku);
-sudoku.midlink = "";
-
-
 const headlineWords = {
+    ci: false,
     name: "headlinewords.top",
     description: "Tracks the daily, weekly, and monthly trends in the words used in news headlines.",
     languageList: [langs.python, langs.sql, langs.css, langs.html],
@@ -76,11 +45,8 @@ const headlineWords = {
     year: "2017",
 }
 
-buildProject(headlineWords);
-headlineWords.midlink = "";
-
-
 const piptube = {
+    ci: false,
     name: "piptube",
     description: "Picture-in-picture video for YouTube. Turns YouTube into a command-line video and audio jukebox.",
     languageList: [langs.python],
@@ -89,11 +55,8 @@ const piptube = {
     year: "2017",
 }
 
-buildProject(piptube);
-piptube.midlink = "";
-
-
 const self = {
+    ci: false,
     name: "self.site",
     altName: "jgthomas.github.io",
     description: "Portfolio website built with just the bare-bones tech of the web.",
@@ -103,11 +66,8 @@ const self = {
     year: "2019",
 }
 
-buildProject(self);
-self.midlink = "";
-
-
 const calcasm = {
+    ci: true,
     name: "calcasm",
     description: "Command line calculator written in pure x86-64 assembly.",
     languageList: [langs.asm],
@@ -116,10 +76,8 @@ const calcasm = {
     year: "2018",
 }
 
-buildProject(calcasm);
-
-
 const draughts = {
+    ci: true,
     name: "draughts",
     altName: "DraughtsGame",
     description: "Desktop draughts application. Human and computer players, in graphical or text mode.",
@@ -129,11 +87,8 @@ const draughts = {
     year: "2018",
 }
 
-buildProject(draughts);
-draughts.midlink = buildCiLink(draughts.altName);
-
-
 const braingame = {
+    ci: true,
     name: "braingame.xyz",
     description: "Brain game website: anagrams, sudoku, and more.",
     languageList: [langs.python, langs.javascript, langs.css, langs.html],
@@ -146,10 +101,8 @@ const braingame = {
     year: "2020",
 }
 
-buildProject(braingame);
-
-
 const emulator = {
+    ci: true,
     name: "emulator",
     altName: "chipset_emulator",
     description: "Emulator for 4- and 8-bit chipsets.",
@@ -164,9 +117,47 @@ const emulator = {
     year: "2018",
 }
 
-buildProject(emulator);
-emulator.midlink = buildCiLink(emulator.altName);
 
+const buildCiLink = (project) => {
+    if (!project.ci) {
+        return "";
+    }
+
+    const ciName = project.altName ? project.altName : project.name;
+
+    return `https://travis-ci.com/jgthomas/${ciName}.svg?branch=master`
+}
+
+const buildRepoLink = (project) => {
+    const repoName = project.altName ? project.altName : project.name;
+    return `https://github.com/jgthomas/${repoName}`
+}
+
+const buildImageName = (name) => {
+    return `images/${name.replaceAll(" ", "_")}.png`
+}
+
+const buildProject = (project) => {
+    project.image = buildImageName(project.name);
+    project.languages = project.languageList.join(", ");
+    project.tools = project.toolList.join(", ");
+    project.build = project.buildList.join(", ");
+    project.midlink = buildCiLink(project);
+    project.github = buildRepoLink(project);
+    project.octocat = octocat;
+}
+
+
+buildProject(succ);
+buildProject(braingame);
+buildProject(self);
+buildProject(draughts);
+buildProject(emulator);
+buildProject(calcasm);
+buildProject(piptube);
+buildProject(pyfunctory);
+buildProject(sudoku);
+buildProject(headlineWords);
 
 const projects = {
     [succ.name]: succ,
