@@ -8,8 +8,9 @@ const buildCiLink = (name) => {
     return `https://travis-ci.com/jgthomas/${name}.svg?branch=master`
 }
 
-const buildRepoLink = (name) => {
-    return `https://github.com/jgthomas/${name}`
+const buildRepoLink = (project) => {
+    const repoName = project.altName ? project.altName : project.name;
+    return `https://github.com/jgthomas/${repoName}`
 }
 
 const buildImageName = (name) => {
@@ -23,7 +24,7 @@ const buildProject = (project) => {
     project.tools = project.toolList.join(", ");
     project.build = project.buildList.join(", ");
     project.midlink = buildCiLink(project.name);
-    project.github = buildRepoLink(project.name);
+    project.github = buildRepoLink(project);
     project.octocat = octocat;
 }
 
@@ -54,7 +55,7 @@ buildProject(pyfunctory);
 
 const sudoku = {
     name: "sudoku solver",
-    url: "sudoku-solver.online",
+    altName: "sudoku-solver.online",
     description: "Sudoku solver written in C, and then compiled to webassembly.",
     languageList: [langs.c, langs.javascript, langs.css, langs.html],
     toolList: [tools.web.webAssembly],
@@ -64,7 +65,6 @@ const sudoku = {
 
 buildProject(sudoku);
 sudoku.midlink = "";
-sudoku.github = buildRepoLink(sudoku.url);
 
 
 const headlineWords = {
@@ -95,7 +95,7 @@ piptube.midlink = "";
 
 const self = {
     name: "self.site",
-    url: "jgthomas.github.io",
+    altName: "jgthomas.github.io",
     description: "Portfolio website built with just the bare-bones tech of the web.",
     languageList: [langs.javascript, langs.css, langs.html],
     toolList: [tools.web.grid, tools.web.flexbox, tools.web.queries, tools.web.mustache],
@@ -105,7 +105,6 @@ const self = {
 
 buildProject(self);
 self.midlink = "";
-self.github = buildRepoLink(self.url);
 
 
 const calcasm = {
@@ -132,7 +131,6 @@ const draughts = {
 
 buildProject(draughts);
 draughts.midlink = buildCiLink(draughts.altName);
-draughts.github = buildRepoLink(draughts.altName);
 
 
 const braingame = {
@@ -168,7 +166,6 @@ const emulator = {
 
 buildProject(emulator);
 emulator.midlink = buildCiLink(emulator.altName);
-emulator.github = buildRepoLink(emulator.altName);
 
 
 const projects = {
