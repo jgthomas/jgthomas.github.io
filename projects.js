@@ -159,6 +159,7 @@ buildProject(pyfunctory);
 buildProject(sudoku);
 buildProject(headlineWords);
 
+
 const projects = {
     [succ.name]: succ,
     [braingame.name]: braingame,
@@ -171,6 +172,7 @@ const projects = {
     [sudoku.name]: sudoku,
     [pyfunctory.name]: pyfunctory,
 }
+
 
 export const projectData = (name) => {
     const data = projects[name];
