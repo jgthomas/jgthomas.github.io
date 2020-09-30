@@ -13,7 +13,7 @@ const buildRepoLink = (name) => {
 }
 
 const buildImageName = (name) => {
-    return `images/${name}.png`
+    return `images/${name.replaceAll(" ", "_")}.png`
 }
 
 
@@ -63,7 +63,6 @@ const sudoku = {
 }
 
 buildProject(sudoku);
-sudoku.image = buildImageName(sudoku.url);
 sudoku.midlink = "";
 sudoku.github = buildRepoLink(sudoku.url);
 
@@ -105,7 +104,6 @@ const self = {
 }
 
 buildProject(self);
-self.image = buildImageName(self.url);
 self.midlink = "";
 self.github = buildRepoLink(self.url);
 
