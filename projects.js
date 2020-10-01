@@ -131,7 +131,7 @@ const emulator = {
     description: "Emulator for 4- and 8-bit chipsets.",
     features: ["Interactive shell",
                "Run program from file",
-               "Own assembly language",
+               "Custom assembly",
                "Simple assembler",
                "Step-through debugger"],
     languageList: [langs.c],
