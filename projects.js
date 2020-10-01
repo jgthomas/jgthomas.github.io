@@ -11,9 +11,11 @@ const succ = {
     name: "succ",
     description: "Compiler for a subset of C.",
     features: [
+        "Multi-pass compiler",
         "Growing C support",
         "x86-64 assembly",
         "Robust error handling",
+        "Basic type checking",
     ],
     languageList: [langs.haskell],
     toolList: [tools.haskell.hspec, tools.haskell.hlint, tools.haskell.stylish],
