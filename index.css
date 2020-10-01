@@ -149,7 +149,7 @@ nav {
         width: 70%;
         margin: auto;
         text-align: left;
-        font-size: large;
+        font-size: 90%;
         font-weight: 400;
 }
 
@@ -172,7 +172,7 @@ nav {
 
 .uses-title {
         color: cornflowerblue;
-        font-size: large;
+        font-size: 100%;
 }
 
 .feature-list-title {
