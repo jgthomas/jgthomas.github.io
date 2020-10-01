@@ -3,6 +3,8 @@ import { langs, tools, build } from "./tech.js";
 
 
 const octocat = "https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png";
+const archLogo - "https://raw.githubusercontent.com/lukas-w/font-logos/master/vectors/archlinux.svg";
+
 
 const succ = {
     ci: true,
