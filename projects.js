@@ -87,7 +87,12 @@ const draughts = {
     name: "draughts",
     altName: "DraughtsGame",
     description: "Desktop draughts application.",
-    detail: "Human or computer players, in graphical or text mode.",
+    features: ["Computer player",
+               "Save and resume",
+               "Graphical mode",
+               "Text mode",
+               "Swap bewteen modes"
+              ],
     languageList: [langs.java, langs.sql],
     toolList: [tools.java.javafx, tools.java.junit, tools.sqlite],
     buildList: [build.maven, build.travis],
