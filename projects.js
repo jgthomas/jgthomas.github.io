@@ -10,7 +10,11 @@ const succ = {
     ci: true,
     name: "succ",
     description: "Compiler for a subset of C.",
-    detail: "Compiles a (growing!) subset of C to x86-64 assembly.",
+    features: [
+        "Growing C support",
+        "x86-64 assembly",
+        "Robust error handling",
+    ],
     languageList: [langs.haskell],
     toolList: [tools.haskell.hspec, tools.haskell.hlint, tools.haskell.stylish],
     buildList: [build.stack, build.travis, build.codecov],
