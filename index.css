@@ -17,7 +17,7 @@ html, body {
         border-radius: 0 0 2% 2%;
         padding: 1%;
         margin-bottom: 2%;
-        font-weight: bold;
+        font-weight: 400;
 }
 
 nav {
@@ -82,11 +82,11 @@ nav {
 
 .heading {
         text-align: center;
-        font-weight: bolder;
+        font-weight: 400;
 }
 
 .notice {
-        font-weight: bold;
+        font-weight: 400;
         font-style: italic;
         font-size: large;
         color: orangered;
@@ -140,7 +140,7 @@ nav {
 }
 
 .emphasis {
-        font-weight: bold;
+        font-weight: 400;
         color: cornflowerblue;
 }
 
@@ -150,7 +150,7 @@ nav {
         margin: auto;
         text-align: left;
         font-size: large;
-        font-weight: bold;
+        font-weight: 400;
 }
 
 .year {
@@ -178,7 +178,7 @@ nav {
 .feature-list-title {
         color: cornflowerblue;
         list-style: none;
-        font-weight: bold;
+        font-weight: 400;
 }
 
 .feature-list {
