@@ -28,6 +28,7 @@ export const tools = {
         flake8: "Flake8",
         black: "Black",
         pytest: "pytest",
+        jinja2: "Jinja2",
     },
     javascript: {
         react: "React",
