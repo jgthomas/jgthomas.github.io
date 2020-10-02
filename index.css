@@ -33,11 +33,6 @@ nav {
   padding: 1%;
 }
 
-.proj-link {
-  text-decoration: none;
-  outline: none;
-}
-
 .search-form {
   display: flex;
   flex-direction: column;
@@ -89,13 +84,6 @@ nav {
   font-weight: 400;
 }
 
-.notice {
-  font-weight: 400;
-  font-style: italic;
-  font-size: large;
-  color: orangered;
-}
-
 .main-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -143,11 +131,6 @@ nav {
   margin: auto;
 }
 
-.emphasis {
-  font-weight: 400;
-  color: cornflowerblue;
-}
-
 .tech-used {
   color: dimgrey;
   width: 70%;
@@ -173,12 +156,6 @@ nav {
 
 .uses-title {
   color: cornflowerblue;
-}
-
-.feature-list-title {
-  color: cornflowerblue;
-  list-style: none;
-  font-weight: 400;
 }
 
 .feature-list {
