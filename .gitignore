@@ -1,0 +1,12 @@
+node_modules/
+*.log
+*.sql
+*.sqlite
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
