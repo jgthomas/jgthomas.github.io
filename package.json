@@ -1,0 +1,16 @@
+{
+  "name": "jgthomas.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "main": "index.js",
+  "repository": "git@github.com:jgthomas/jgthomas.github.io.git",
+  "author": "James Thomas <codeactor@protonmail.com>",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "prettier": "^2.1.2"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  }
+}
