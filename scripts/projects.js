@@ -82,8 +82,10 @@ const self = {
     tools.web.flexbox,
     tools.web.queries,
     tools.web.mustache,
+    tools.javascript.eslint,
+    tools.prettier,
   ],
-  buildList: ['git push!'],
+  buildList: [build.yarn, build.ghpages],
   year: '2019',
 };
 
@@ -127,7 +129,7 @@ const braingame = {
     tools.python.flake8,
     tools.python.black,
     tools.javascript.react,
-    tools.javascript.jslint,
+    tools.javascript.eslint,
     tools.prettier,
     tools.preCommit,
     tools.docker,

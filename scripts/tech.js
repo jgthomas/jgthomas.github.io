@@ -30,7 +30,7 @@ export const tools = {
   },
   javascript: {
     react: 'React',
-    jslint: 'JSLint',
+    eslint: 'ESLint',
   },
   java: {
     javafx: 'JavaFX',
@@ -69,4 +69,5 @@ export const build = {
   digitalOcean: 'DigitalOcean',
   nginx: 'NGINX',
   emscripten: 'Emscripten',
+  ghpages: 'GitHub Pages',
 };
