@@ -75,7 +75,7 @@ const self = {
   name: 'self.site',
   altName: 'jgthomas.github.io',
   description: 'Portfolio website.',
-  detail: 'Built with just the bare-bones tech of the modern web.',
+  detail: 'Built with just the bare-bones tech of the web.',
   languageList: [langs.javascript, langs.css, langs.html],
   toolList: [
     tools.web.grid,

@@ -3,8 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: "Chivo", sans-serif;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Chivo', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: cornflowerblue;
   color: whitesmoke;
 }
@@ -90,8 +90,8 @@ nav {
   grid-template-rows: 1fr auto;
   grid-row-gap: 1%;
   grid-template-areas:
-    "projects"
-    "me-bio";
+    'projects'
+    'me-bio';
 }
 
 .project-grid {
@@ -129,6 +129,10 @@ nav {
   width: 80%;
   font-size: larger;
   margin: auto;
+}
+
+.detail {
+  font-size: 90%;
 }
 
 .tech-used {
