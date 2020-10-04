@@ -24,6 +24,8 @@ const pyfunctory = {
   ci: true,
   name: 'pyfunctory',
   description: 'Pythonic implementations of functional programming concepts.',
+  detail:
+    'Map, filter, reduce, and friends built from generator expressions and list comprehensions.',
   languageList: [langs.python],
   toolList: [tools.python.pytest, tools.python.flake8, tools.python.black],
   buildList: [build.poetry, build.travis, build.codecov],
