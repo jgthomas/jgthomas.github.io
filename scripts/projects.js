@@ -218,10 +218,12 @@ const projects = {
 
 export const projectData = (name) => {
   const data = projects[name];
+  const detail = data.detail ? data.detail : '';
   const features = data.features ? data.features.join(', ') : '';
 
   return `${data.name}
             ${data.description}
+            ${detail}
             ${features}
             ${data.languages}
             ${data.tools}
