@@ -92,7 +92,9 @@ const self = {
 const calcasm = {
   ci: true,
   name: 'calcasm',
-  description: 'Command line calculator written in pure x86-64 assembly.',
+  description: 'Command line calculator written in x86-64 assembly.',
+  detail:
+    'All input, output, parsing, and calculation performed in pure assembly, with Linux syscalls.',
   languageList: [langs.asm],
   toolList: [tools.asm.as, tools.asm.ld, tools.c.gdb],
   buildList: [build.make, build.travis],
