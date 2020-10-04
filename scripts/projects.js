@@ -48,7 +48,9 @@ const sudoku = {
 const headlineWords = {
   ci: false,
   name: 'headlinewords.top',
-  description: 'Tracks trends in the words used in news headlines.',
+  description: 'Site tracking words used in news headlines.',
+  detail:
+    'Daily, weekly, and monthly trends from a range of sources, across multiple countries.',
   languageList: [langs.python, langs.sql, langs.css, langs.html],
   toolList: [tools.python.flask, tools.python.jinja2, tools.sqlite],
   buildList: [build.pip, build.digitalOcean, build.nginx],
