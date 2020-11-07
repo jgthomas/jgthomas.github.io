@@ -16,6 +16,8 @@ export const tools = {
     hlint: 'Hlint',
     stylish: 'stylish-haskell',
     ormolu: 'Ormolu',
+    weeder: 'weeder',
+    ghcid: 'ghcid',
   },
   c: {
     gdb: 'GDB',

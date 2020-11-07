@@ -15,7 +15,13 @@ const succ = {
     'Basic type checking',
   ],
   languageList: [langs.haskell],
-  toolList: [tools.haskell.hspec, tools.haskell.hlint, tools.haskell.ormolu],
+  toolList: [
+    tools.haskell.hspec,
+    tools.haskell.hlint,
+    tools.haskell.ormolu,
+    tools.haskell.weeder,
+    tools.haskell.ghcid,
+  ],
   buildList: [build.stack, build.travis, build.codecov],
   year: '2019',
 };
