@@ -30,6 +30,7 @@ export const tools = {
     black: 'Black',
     pytest: 'pytest',
     jinja2: 'Jinja2',
+    fastapi: 'FastAPI',
   },
   javascript: {
     react: 'React',

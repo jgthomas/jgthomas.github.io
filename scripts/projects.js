@@ -136,7 +136,7 @@ const braingame = {
   detail: 'Anagrams, word games, sudoku, and more to come.',
   languageList: [langs.python, langs.javascript, langs.css, langs.html],
   toolList: [
-    tools.python.flask,
+    tools.python.fastapi,
     tools.python.pytest,
     tools.python.flake8,
     tools.python.black,
