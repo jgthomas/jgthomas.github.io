@@ -201,6 +201,12 @@ nav {
   margin-right: auto;
 }
 
+.me-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 /*
  ##Device = absurdly large monitors
 */
