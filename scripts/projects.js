@@ -137,14 +137,14 @@ const braingame = {
   languageList: [langs.python, langs.javascript, langs.css, langs.html],
   toolList: [
     tools.python.fastapi,
+    tools.javascript.react,
+    tools.docker,
     tools.python.pytest,
     tools.python.flake8,
     tools.python.black,
-    tools.javascript.react,
     tools.javascript.eslint,
     tools.prettier,
     tools.preCommit,
-    tools.docker,
   ],
   buildList: [
     build.poetry,
