@@ -178,8 +178,8 @@ nav {
 
 .profile-text {
   color: dimgrey;
-  min-width: 60%;
-  max-width: 60%;
+  min-width: 70%;
+  max-width: 70%;
   margin: auto;
 }
 
@@ -218,6 +218,10 @@ nav {
   .full-width {
     width: 45%;
   }
+  .profile-text {
+    min-width: 60%;
+    max-width: 60%;
+  }
 }
 
 /*
@@ -225,6 +229,10 @@ nav {
   ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1281px) {
+  .profile-text {
+    min-width: 60%;
+    max-width: 60%;
+  }
 }
 
 /*
@@ -238,6 +246,10 @@ nav {
   }
   .full-width {
     width: 90%;
+  }
+  .profile-text {
+    min-width: 60%;
+    max-width: 60%;
   }
 }
 
