@@ -12,8 +12,6 @@ const searchProjects = (searchTerm) => {
       hideNode(project);
     }
   }
-
-  hideNode(document.getElementById('me'));
 };
 
 const showNode = (node) => {
@@ -47,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchTerm = searchBox.value.toLowerCase().trim();
     if (!searchTerm) {
       showAllProjects();
-      showNode(document.getElementById('me'));
       hideResetButton();
     } else {
       showResetButton();
@@ -59,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('clear-button').addEventListener('click', () => {
     showAllProjects();
-    showNode(document.getElementById('me'));
     hideResetButton();
   });
 });
