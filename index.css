@@ -191,6 +191,16 @@ nav {
   margin-bottom: 2.5em;
 }
 
+.tool-icon-list {
+  text-align: center;
+}
+
+.tool-icon {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*
  ##Device = absurdly large monitors
 */
