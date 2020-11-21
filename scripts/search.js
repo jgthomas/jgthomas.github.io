@@ -40,6 +40,13 @@ const showAllProjects = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('search-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const searchBox = document.getElementById('search-bar');
   searchBox.addEventListener('input', () => {
     const searchTerm = searchBox.value.toLowerCase().trim();
