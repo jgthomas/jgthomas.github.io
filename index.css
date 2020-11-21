@@ -23,7 +23,7 @@ body {
 
 nav {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 3em;
 }
 
 .section-link {
@@ -337,9 +337,6 @@ nav {
   .full-width {
     width: 95%;
   }
-  nav {
-    margin-top: 1em;
-  }
   .feature-list {
     width: 70%;
   }
@@ -364,9 +361,6 @@ nav {
   }
   .full-width {
     width: 90%;
-  }
-  nav {
-    margin-top: 1em;
   }
   .feature-list {
     width: 80%;
