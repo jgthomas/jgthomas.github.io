@@ -8,9 +8,17 @@
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "eslint": "^7.10.0",
-    "prettier": "^2.1.2"
+    "html-webpack-plugin": "^4.5.0",
+    "prettier": "^2.1.2",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.3.0"
   },
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "mustache": "^4.1.0"
   }
 }
