@@ -1,4 +1,5 @@
 import { projectsList } from './projects.js';
+import Mustache from 'mustache';
 
 const renderProjects = () => {
   const template = document.getElementById('project-template-list').innerHTML;
