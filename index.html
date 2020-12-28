@@ -1,0 +1,29 @@
+<!doctype html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"><link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap" rel="stylesheet"><link rel="stylesheet" href="index.css"></head><body><script id="project-template-list" type="text/x-mustache-template">{{#projects}}
+        <div id="{{name}}" class="project">
+          <h2 class="heading">{{name}}</h2>
+          <div class="description">
+            <p>{{description}}</p>
+            <p class="detail">{{detail}}</p>
+            <div class="feature-list">
+              {{#features}}<li>{{.}}</li>{{/features}}
+            </div>
+          </div>
+          <img class="project-image" src="{{image}}">
+          <div class="tech-used">
+            <p><span class="uses-title">Languages: </span>{{languages}}</p>
+            <p><span class="uses-title">Tools: </span>{{tools}}</p>
+            <p><span class="uses-title">Build: </span>{{build}}</p>
+          </div>
+          <div class="status-line">
+            <div class="year">{{year}}</div>
+            <div>
+              <img src="{{midlink}}" />
+            </div>
+            <div>
+              <a href="{{github}}">
+                <img class="link-image" alt="GitHub" src="{{octocat}}"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      {{/projects}}</script><script type="module" src="./dist/main.js"></script><header class="full-width"><h1 class="heading">The Late Developer</h1><h3 class="tagline">I pivoted to programming, these projects are how...</h3><nav><a class="section-link" href="index.html">Projects</a> <a class="section-link" href="me.html">Me</a> <a class="section-link" href="https://www.dropbox.com/s/p7sr20jl648jv1k/CV.pdf?dl=0">CV</a></nav></header><form id="search-form" class="search-form"><input id="search-bar" placeholder="search projects..."> <input id="clear-button" class="clear-button hidden" type="reset" value="Clear"></form><div class="main-grid"><div id="all-projects" class="project-grid"></div></div><script src="main.js"></script></body>
