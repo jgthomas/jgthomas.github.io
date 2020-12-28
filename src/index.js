@@ -1,2 +1,14 @@
 import './renderProjects.js';
 import './search.js';
+import '../index.css';
+import '../images/succ.png';
+import '../images/sudoku_solver.png';
+import '../images/self.site.png';
+import '../images/pyfunctory.png';
+import '../images/playwords.png';
+import '../images/piptube.png';
+import '../images/headlinewords.top.png';
+import '../images/emulator.png';
+import '../images/draughts.png';
+import '../images/calcasm.png';
+import '../images/braingame.xyz.png';
