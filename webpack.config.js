@@ -30,4 +30,9 @@ module.exports = {
       template: path.resolve(__dirname, 'me.html'),
     }),
   ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
+  },
 };
