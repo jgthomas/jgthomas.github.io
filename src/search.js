@@ -40,29 +40,40 @@ const showAllProjects = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('search-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-  });
+  const searchForm = document.getElementById('search-form');
+
+  if (searchForm) {
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchBox = document.getElementById('search-bar');
-  searchBox.addEventListener('input', () => {
-    const searchTerm = searchBox.value.toLowerCase().trim();
-    if (!searchTerm) {
-      showAllProjects();
-      hideResetButton();
-    } else {
-      showResetButton();
-      searchProjects(searchTerm);
-    }
-  });
+
+  if (searchBox) {
+    searchBox.addEventListener('input', () => {
+      const searchTerm = searchBox.value.toLowerCase().trim();
+      if (!searchTerm) {
+        showAllProjects();
+        hideResetButton();
+      } else {
+        showResetButton();
+        searchProjects(searchTerm);
+      }
+    });
+  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('clear-button').addEventListener('click', () => {
-    showAllProjects();
-    hideResetButton();
-  });
+  const clearButton = document.getElementById('clear-button');
+
+  if (clearButton) {
+    clearButton.addEventListener('click', () => {
+      showAllProjects();
+      hideResetButton();
+    });
+  }
 });
