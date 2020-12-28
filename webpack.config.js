@@ -18,6 +18,11 @@ module.exports = {
           name: '[path][name].[ext]',
         },
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
     ],
   },
   devtool: 'inline-source-map',
