@@ -81,8 +81,9 @@ const piptube = {
 };
 
 const self = {
-  ci: false,
+  ci: true,
   name: 'self.site',
+  ghAction: 'Deploy',
   altName: 'jgthomas.github.io',
   description: 'Portfolio website.',
   detail: 'Responsive site with just the bare-bones tech of the web.',
@@ -180,6 +181,10 @@ const emulator = {
 const buildCiLink = (project) => {
   if (!project.ci) {
     return '';
+  }
+
+  if (project.ghAction) {
+    return `https://github.com/jgthomas/jgthomas.github.io/workflows/${project.ghAction}/badge.svg`;
   }
 
   const ciName = project.altName ? project.altName : project.name;
