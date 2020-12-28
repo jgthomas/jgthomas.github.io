@@ -85,7 +85,7 @@ const self = {
   name: 'self.site',
   altName: 'jgthomas.github.io',
   description: 'Portfolio website.',
-  detail: 'Built with just the bare-bones tech of the web.',
+  detail: 'Responsive site with just the bare-bones tech of the web.',
   languageList: [langs.javascript, langs.css, langs.html],
   toolList: [
     tools.web.grid,
@@ -94,8 +94,10 @@ const self = {
     tools.web.mustache,
     tools.javascript.eslint,
     tools.prettier,
+    tools.web.webpack,
+    tools.web.babel,
   ],
-  buildList: [build.yarn, build.ghpages],
+  buildList: [build.yarn, build.ghactions, build.ghpages],
   year: '2019',
 };
 

@@ -50,6 +50,8 @@ export const tools = {
     queries: 'media queries',
     mustache: '{{ mustache }}',
     webAssembly: 'WebAssembly',
+    webpack: 'webpack',
+    babel: 'Babel',
   },
   preCommit: 'pre-commit',
   prettier: 'Prettier',
@@ -74,4 +76,5 @@ export const build = {
   nginx: 'NGINX',
   emscripten: 'Emscripten',
   ghpages: 'GitHub Pages',
+  ghactions: 'GitHub Actions',
 };
