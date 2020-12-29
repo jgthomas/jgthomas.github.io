@@ -83,7 +83,7 @@ const piptube = {
 const self = {
   ci: true,
   name: 'self.site',
-  ghAction: 'Deploy',
+  ghAction: 'deploy',
   altName: 'jgthomas.github.io',
   description: 'Portfolio website.',
   detail: 'Responsive site with just the bare-bones tech of the web.',
