@@ -28,11 +28,11 @@ module.exports = {
   devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'index.html'),
+      template: path.resolve(__dirname, 'src', 'index.html'),
     }),
     new HtmlWebpackPlugin({
       filename: 'me.html',
-      template: path.resolve(__dirname, 'me.html'),
+      template: path.resolve(__dirname, 'src', 'me.html'),
     }),
   ],
   devServer: {
