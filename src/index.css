@@ -117,13 +117,10 @@ nav {
 }
 
 .key-grid {
-  /*grid-area: key;*/
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   color: darkslategrey;
-  /*margin-bottom: 0;*/
-  /*padding: 0;*/
 }
 
 .project {
