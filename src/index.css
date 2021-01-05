@@ -99,7 +99,7 @@ nav {
   grid-row-gap: 1%;
   grid-template-areas:
     'projects'
-    'me-bio';
+    'key';
 }
 
 .project-grid {
@@ -116,8 +116,14 @@ nav {
   margin-bottom: 1em;
 }
 
-.me-grid {
-  grid-area: me-bio;
+.key-grid {
+  /*grid-area: key;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: darkslategrey;
+  /*margin-bottom: 0;*/
+  /*padding: 0;*/
 }
 
 .project {

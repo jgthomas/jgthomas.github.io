@@ -45,10 +45,17 @@
         <a class="section-link" href="https://www.dropbox.com/s/p7sr20jl648jv1k/CV.pdf?dl=0">CV</a>
       </nav>
     </header>
-    <form id="search-form" class="search-form">
-      <input type="text" id="search-bar" placeholder="search projects...">
-      <input id="clear-button" class="clear-button hidden" type="reset" value="Clear">
-    </form>
+    <div class="key-grid full-width">
+      <div><span class="active">&#9679;</span> active</div>
+      <div><span class="archived">&#9679;</span> archived</div>
+      <div><span class="retired">&#9679;</span> retired</div>
+    </div>
+    <div>
+      <form id="search-form" class="search-form">
+        <input type="text" id="search-bar" placeholder="search projects...">
+        <input id="clear-button" class="clear-button hidden" type="reset" value="Clear">
+      </form>
+    </div>
     <div class="main-grid">
       <div id="all-projects" class="project-grid"></div>
     </div>
