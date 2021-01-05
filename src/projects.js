@@ -258,6 +258,7 @@ export const projectData = (name) => {
             ${data.tools}
             ${data.build}
             ${data.year}
+            ${data.status}
            `.toLowerCase();
 };
 
