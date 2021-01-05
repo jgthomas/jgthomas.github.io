@@ -135,6 +135,26 @@ nav {
   align-self: stretch;
 }
 
+.title-line {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.status-light {
+  margin-right: auto;
+  width: 26px;
+}
+
+.project-title {
+  font-size: 150%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .description {
   color: dimgrey;
   width: 80%;
