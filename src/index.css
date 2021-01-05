@@ -209,6 +209,18 @@ nav {
   margin-right: auto;
 }
 
+.active {
+  color: #2dc937;
+}
+
+.archived {
+  color: #e7b416;
+}
+
+.retired {
+  color: darkgray;
+}
+
 .me-links {
   display: flex;
   flex-direction: row;

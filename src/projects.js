@@ -24,6 +24,7 @@ const succ = {
   ],
   buildList: [build.stack, build.travis, build.codecov],
   year: '2019',
+  status: 'active',
 };
 
 const pyfunctory = {
@@ -36,6 +37,7 @@ const pyfunctory = {
   toolList: [tools.python.pytest, tools.python.flake8, tools.python.black],
   buildList: [build.poetry, build.travis, build.codecov],
   year: '2017',
+  status: 'archived',
 };
 
 const sudoku = {
@@ -49,6 +51,7 @@ const sudoku = {
   toolList: [tools.web.webAssembly],
   buildList: [build.emscripten],
   year: '2018',
+  status: 'retired',
 };
 
 const headlineWords = {
@@ -61,6 +64,7 @@ const headlineWords = {
   toolList: [tools.python.flask, tools.python.jinja2, tools.sqlite],
   buildList: [build.pip, build.digitalOcean, build.nginx],
   year: '2017',
+  status: 'archived',
 };
 
 const piptube = {
@@ -78,6 +82,7 @@ const piptube = {
   toolList: [tools.youtubeDl, tools.mpv],
   buildList: [build.poetry],
   year: '2017',
+  status: 'archived',
 };
 
 const self = {
@@ -100,6 +105,7 @@ const self = {
   ],
   buildList: [build.yarn, build.ghactions, build.ghpages],
   year: '2019',
+  status: 'active',
 };
 
 const calcasm = {
@@ -112,6 +118,7 @@ const calcasm = {
   toolList: [tools.asm.as, tools.asm.ld, tools.c.gdb],
   buildList: [build.make, build.travis],
   year: '2018',
+  status: 'archived',
 };
 
 const draughts = {
@@ -130,6 +137,7 @@ const draughts = {
   toolList: [tools.java.javafx, tools.java.junit, tools.sqlite],
   buildList: [build.maven, build.travis],
   year: '2018',
+  status: 'archived',
 };
 
 const braingame = {
@@ -158,6 +166,7 @@ const braingame = {
     build.aws_eb,
   ],
   year: '2020',
+  status: 'active',
 };
 
 const emulator = {
@@ -176,6 +185,7 @@ const emulator = {
   toolList: [tools.c.cmocka, tools.c.gdb, tools.c.valgrind],
   buildList: [build.make, build.travis],
   year: '2018',
+  status: 'archived',
 };
 
 const buildCiLink = (project) => {
