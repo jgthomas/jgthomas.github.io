@@ -82,6 +82,7 @@ nav {
 .heading {
   text-align: center;
   font-weight: 400;
+  margin-bottom: 0;
 }
 
 .tagline {
@@ -117,10 +118,24 @@ nav {
 }
 
 .key-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1%;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.key-items {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   color: darkslategrey;
+  text-align: center;
+  width: 100%;
+  margin-top: 2em;
 }
 
 .project {
