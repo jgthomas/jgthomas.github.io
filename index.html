@@ -15,7 +15,9 @@
             <p><span class="uses-title">Build: </span>{{build}}</p>
           </div>
           <div class="status-line">
-            <div class="year">{{year}}</div>
+            <div class="year">
+              <span class="{{status}}">&#9679;</span> {{year}}
+            </div>
             <div>
               <img src="{{midlink}}" />
             </div>
@@ -26,4 +28,4 @@
             </div>
           </div>
         </div>
-      {{/projects}}</script><header class="full-width"><h1 class="heading">The Late Developer</h1><h3 class="tagline">I pivoted to programming, these projects are how...</h3><nav><a class="section-link" href="index.html">Projects</a> <a class="section-link" href="me.html">Me</a> <a class="section-link" href="https://www.dropbox.com/s/p7sr20jl648jv1k/CV.pdf?dl=0">CV</a></nav></header><form id="search-form" class="search-form"><input id="search-bar" placeholder="search projects..."> <input id="clear-button" class="clear-button hidden" type="reset" value="Clear"></form><div class="main-grid"><div id="all-projects" class="project-grid"></div></div><script src="main.js"></script></body>
+      {{/projects}}</script><header class="full-width"><h1 class="heading">The Late Developer</h1><h3 class="tagline">I pivoted to programming, these projects are how...</h3><nav><a class="section-link" href="index.html">Projects</a> <a class="section-link" href="me.html">Me</a> <a class="section-link" href="https://www.dropbox.com/s/p7sr20jl648jv1k/CV.pdf?dl=0">CV</a></nav></header><div class="key-grid full-width"><div><span class="active">&#9679;</span> active</div><div><span class="archived">&#9679;</span> archived</div><div><span class="retired">&#9679;</span> retired</div></div><div><form id="search-form" class="search-form"><input id="search-bar" placeholder="search projects..."> <input id="clear-button" class="clear-button hidden" type="reset" value="Clear"></form></div><div class="main-grid"><div id="all-projects" class="project-grid"></div></div><script src="main.js"></script></body>
