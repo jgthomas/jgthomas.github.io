@@ -94,6 +94,7 @@ nav {
 }
 
 .main-grid {
+  margin-top: 1em;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -101,6 +102,10 @@ nav {
   grid-template-areas:
     'projects'
     'key';
+}
+
+.main-project-grid {
+  margin-top: 0em;
 }
 
 .project-grid {
@@ -126,6 +131,7 @@ nav {
   justify-items: center;
   justify-content: space-evenly;
   text-align: center;
+  margin-top: 1em;
 }
 
 .key-items {
