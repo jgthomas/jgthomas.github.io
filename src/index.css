@@ -161,6 +161,7 @@ nav {
 .status-light {
   margin-right: auto;
   font-size: larger;
+  width: 10%;
 }
 
 .project-title {
