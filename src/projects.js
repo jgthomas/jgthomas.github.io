@@ -106,10 +106,14 @@ const self = {
     tools.web.mustache,
     tools.javascript.eslint,
     tools.prettier,
+  ],
+  buildList: [
+    build.yarn,
     tools.web.webpack,
     tools.web.babel,
+    build.ghactions,
+    build.ghpages,
   ],
-  buildList: [build.yarn, build.ghactions, build.ghpages],
   year: '2019',
   status: status.active,
 };
