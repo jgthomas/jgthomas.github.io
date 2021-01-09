@@ -1,6 +1,6 @@
 import { langs, tools, build } from './tech.js';
 
-export const status = {
+const status = {
   active: 'active',
   archived: 'archived',
   retired: 'retired',
