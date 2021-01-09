@@ -18,7 +18,7 @@ const succ = {
     'Growing C support',
     'x86-64 assembly',
     'Robust error handling',
-    'Basic type checking',
+    'Basic type enforcement',
   ],
   languageList: [langs.haskell],
   toolList: [
