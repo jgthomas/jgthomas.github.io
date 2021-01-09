@@ -1,4 +1,4 @@
-import { projectData } from './projects.js';
+import { projectData, projectStatus, status } from './projects.js';
 
 const searchProjects = (searchTerm) => {
   const projects = document.getElementsByClassName('project');
@@ -12,6 +12,26 @@ const searchProjects = (searchTerm) => {
       hideNode(project);
     }
   }
+};
+
+const searchProjectStatus = (searchTerm) => {
+  const projects = document.getElementsByClassName('project');
+
+  for (const project of projects) {
+    if (projectStatus(project.id) === searchTerm) {
+      showNode(project);
+    } else {
+      hideNode(project);
+    }
+  }
+};
+
+const isStatusSearch = (searchTerm) => {
+  return (
+    searchTerm === status.active ||
+    searchTerm === status.archived ||
+    searchTerm === status.retired
+  );
 };
 
 const showNode = (node) => {
@@ -59,6 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!searchTerm) {
         showAllProjects();
         hideResetButton();
+      } else if (isStatusSearch(searchTerm)) {
+        showResetButton();
+        searchProjectStatus(searchTerm);
       } else {
         showResetButton();
         searchProjects(searchTerm);

@@ -1,6 +1,6 @@
 import { langs, tools, build } from './tech.js';
 
-const status = {
+export const status = {
   active: 'active',
   archived: 'archived',
   retired: 'retired',
@@ -266,6 +266,10 @@ export const projectData = (name) => {
             ${data.year}
             ${data.status}
            `.toLowerCase();
+};
+
+export const projectStatus = (name) => {
+  return projects[name].status;
 };
 
 export const projectsList = {
