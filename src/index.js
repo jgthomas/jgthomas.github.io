@@ -12,3 +12,6 @@ import '../images/emulator.png';
 import '../images/draughts.png';
 import '../images/calcasm.png';
 import '../images/braingame.xyz.png';
+import '../images/bluetel_solutions.png';
+import '../images/smallBham.png';
+import '../images/edinburgh_council.jpg';
