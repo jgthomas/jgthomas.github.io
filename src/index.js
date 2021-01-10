@@ -16,3 +16,4 @@ import '../images/bluetel_solutions.png';
 import '../images/smallBham.png';
 import '../images/edinburgh_council.jpg';
 import '../images/laptop_man.png';
+import '../images/codebar.png';
