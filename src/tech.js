@@ -8,6 +8,7 @@ export const langs = {
   java: 'Java',
   sql: 'SQL',
   asm: 'x86-64 Assembly',
+  go: 'Go',
 };
 
 export const tools = {
@@ -45,6 +46,9 @@ export const tools = {
   asm: {
     as: 'as',
     ld: 'ld',
+  },
+  go: {
+    tooling: 'Go Tooling',
   },
   web: {
     grid: 'Grid',

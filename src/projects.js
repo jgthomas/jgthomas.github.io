@@ -70,7 +70,7 @@ const headlineWords = {
   toolList: [tools.python.flask, tools.python.jinja2, tools.sqlite],
   buildList: [build.pip, build.digitalOcean, build.nginx],
   year: '2017',
-  status: status.archived,
+  status: status.retired,
 };
 
 const piptube = {
@@ -244,6 +244,35 @@ const foodApi = {
   status: status.active,
 };
 
+const dish = {
+  ci: true,
+  name: 'dish',
+  description: 'Docker clone',
+  detail: 'Container management non-solution.',
+  features: [
+    'Create new containers',
+    'Access and use containers',
+    'Manage created containers',
+  ],
+  languageList: [langs.go],
+  toolList: [tools.go.tooling],
+  buildList: [build.make, build.travis],
+  year: '2019',
+  status: status.archived,
+};
+
+const playwords = {
+  ci: false,
+  name: 'playwords.xyz',
+  description: 'Word game website',
+  features: ['Solve anagrams', 'Word squares', 'Scrabble rack'],
+  languageList: [langs.python, langs.javascript, langs.css, langs.html],
+  toolList: [tools.python.flask],
+  buildList: [build.pip, build.digitalOcean, build.nginx],
+  year: '2017',
+  status: status.retired,
+};
+
 const buildCiLink = (project) => {
   if (!project.ci) {
     return '';
@@ -289,18 +318,22 @@ buildProject(sudoku);
 buildProject(headlineWords);
 buildProject(jsoner);
 buildProject(foodApi);
+buildProject(dish);
+buildProject(playwords);
 
 const projects = {
   [succ.name]: succ,
   [foodApi.name]: foodApi,
   [jsoner.name]: jsoner,
   [self.name]: self,
+  [dish.name]: dish,
   [draughts.name]: draughts,
   [calcasm.name]: calcasm,
   [emulator.name]: emulator,
   [piptube.name]: piptube,
-  [headlineWords.name]: headlineWords,
   [sudoku.name]: sudoku,
+  [playwords.name]: playwords,
+  [headlineWords.name]: headlineWords,
 };
 
 export const projectData = (name) => {

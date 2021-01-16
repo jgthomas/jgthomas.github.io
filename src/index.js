@@ -19,3 +19,5 @@ import '../images/laptop_man.png';
 import '../images/codebar.png';
 import '../images/jsoner.png';
 import '../images/foodApi.png';
+import '../images/dish.png';
+import '../images/playwords.xyz.png';
