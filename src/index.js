@@ -18,3 +18,4 @@ import '../images/edinburgh_council.jpg';
 import '../images/laptop_man.png';
 import '../images/codebar.png';
 import '../images/jsoner.png';
+import '../images/foodApi.png';

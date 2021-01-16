@@ -36,6 +36,7 @@ export const tools = {
   javascript: {
     react: 'React',
     eslint: 'ESLint',
+    node: 'Node.js',
   },
   java: {
     javafx: 'JavaFX',
@@ -53,6 +54,12 @@ export const tools = {
     webAssembly: 'WebAssembly',
     webpack: 'webpack',
     babel: 'Babel',
+  },
+  aws: {
+    aws: 'AWS',
+    lambda: 'Lambda',
+    apiGateway: 'API Gateway',
+    dynamoDB: 'DynamoDB',
   },
   preCommit: 'pre-commit',
   prettier: 'Prettier',
@@ -78,4 +85,6 @@ export const build = {
   emscripten: 'Emscripten',
   ghpages: 'GitHub Pages',
   ghactions: 'GitHub Actions',
+  npm: 'npm',
+  serverless: 'Serverless Framework',
 };

@@ -217,6 +217,33 @@ const jsoner = {
   status: status.active,
 };
 
+const foodApi = {
+  ci: true,
+  ghAction: 'deploy',
+  name: 'foodApi',
+  description: 'Backend for food app',
+  features: [
+    'Food pantry record',
+    'Recipe book',
+    'Matches recipes to food',
+    'Suggests alternatives',
+    'Replacement ingredients',
+  ],
+  languageList: [langs.javascript],
+  toolList: [
+    tools.javascript.node,
+    tools.aws.aws,
+    tools.aws.lambda,
+    tools.aws.apiGateway,
+    tools.aws.dynamoDB,
+    tools.javascript.eslint,
+    tools.prettier,
+  ],
+  buildList: [build.npm, build.ghactions, build.serverless],
+  year: '2021',
+  status: status.active,
+};
+
 const buildCiLink = (project) => {
   if (!project.ci) {
     return '';
@@ -261,18 +288,19 @@ buildProject(pyfunctory);
 buildProject(sudoku);
 buildProject(headlineWords);
 buildProject(jsoner);
+buildProject(foodApi);
 
 const projects = {
   [succ.name]: succ,
+  [foodApi.name]: foodApi,
   [jsoner.name]: jsoner,
-  [draughts.name]: draughts,
   [self.name]: self,
+  [draughts.name]: draughts,
   [calcasm.name]: calcasm,
   [emulator.name]: emulator,
   [piptube.name]: piptube,
   [headlineWords.name]: headlineWords,
   [sudoku.name]: sudoku,
-  [pyfunctory.name]: pyfunctory,
 };
 
 export const projectData = (name) => {
