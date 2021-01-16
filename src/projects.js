@@ -198,16 +198,35 @@ const emulator = {
   status: status.archived,
 };
 
+const jsoner = {
+  ci: true,
+  ghAction: 'tests',
+  name: 'jsoner',
+  description: 'JSON Validator',
+  detail: `Built with ${tools.haskell.megaparsec}.`,
+  languageList: [langs.haskell],
+  toolList: [
+    tools.haskell.hspec,
+    tools.haskell.hlint,
+    tools.haskell.ormolu,
+    tools.haskell.weeder,
+    tools.haskell.ghcid,
+  ],
+  buildList: [build.stack, build.ghactions, build.codecov],
+  year: '2020',
+  status: status.active,
+};
+
 const buildCiLink = (project) => {
   if (!project.ci) {
     return '';
   }
 
-  if (project.ghAction) {
-    return `https://github.com/jgthomas/jgthomas.github.io/workflows/${project.ghAction}/badge.svg`;
-  }
-
   const ciName = project.altName ? project.altName : project.name;
+
+  if (project.ghAction) {
+    return `https://github.com/jgthomas/${ciName}/workflows/${project.ghAction}/badge.svg`;
+  }
 
   return `https://travis-ci.com/jgthomas/${ciName}.svg?branch=master`;
 };
@@ -241,10 +260,11 @@ buildProject(piptube);
 buildProject(pyfunctory);
 buildProject(sudoku);
 buildProject(headlineWords);
+buildProject(jsoner);
 
 const projects = {
   [succ.name]: succ,
-  [braingame.name]: braingame,
+  [jsoner.name]: jsoner,
   [draughts.name]: draughts,
   [self.name]: self,
   [calcasm.name]: calcasm,

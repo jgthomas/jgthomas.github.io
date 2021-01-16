@@ -18,6 +18,7 @@ export const tools = {
     ormolu: 'Ormolu',
     weeder: 'weeder',
     ghcid: 'ghcid',
+    megaparsec: 'Megaparsec',
   },
   c: {
     gdb: 'GDB',
