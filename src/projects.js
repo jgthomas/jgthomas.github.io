@@ -221,7 +221,7 @@ const foodApi = {
   ci: true,
   ghAction: 'deploy',
   name: 'foodApi',
-  description: 'Backend for food app',
+  description: 'Serverless backend for food app',
   features: [
     'Food pantry record',
     'Recipe book',
