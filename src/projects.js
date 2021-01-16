@@ -251,7 +251,7 @@ const dish = {
   features: [
     'Create new containers',
     'Access and use containers',
-    'Manage created containers',
+    'Manage containers',
   ],
   languageList: [langs.go],
   toolList: [tools.go.tooling],
