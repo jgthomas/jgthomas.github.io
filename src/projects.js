@@ -12,7 +12,7 @@ const octocat =
 const succ = {
   ci: true,
   name: 'succ',
-  description: 'Compiler for a subset of C.',
+  description: 'Compiler for a subset of C',
   features: [
     'Multi-pass compiler',
     'Growing C support',
@@ -36,9 +36,9 @@ const succ = {
 const pyfunctory = {
   ci: true,
   name: 'pyfunctory',
-  description: 'Pythonic implementations of functional programming concepts.',
+  description: 'Pythonic implementations of functional programming concepts',
   detail:
-    'Map, filter, reduce, and friends built from generator expressions and list comprehensions.',
+    'Map, filter, reduce, and friends built from generator expressions and list comprehensions',
   languageList: [langs.python],
   toolList: [tools.python.pytest, tools.python.flake8, tools.python.black],
   buildList: [build.poetry, build.travis, build.codecov],
@@ -51,8 +51,7 @@ const sudoku = {
   name: 'sudoku solver',
   altName: 'sudoku-solver.online',
   description: 'Sudoku solver website.',
-  detail:
-    'The solver itself is written in C, and then compiled to webassembly.',
+  detail: 'The solver itself is written in C, and then compiled to webassembly',
   languageList: [langs.c, langs.javascript, langs.css, langs.html],
   toolList: [tools.web.webAssembly],
   buildList: [build.emscripten],
@@ -65,7 +64,7 @@ const headlineWords = {
   name: 'headlinewords.top',
   description: 'Site tracking words used in news headlines.',
   detail:
-    'Daily, weekly, and monthly trends from a range of sources, across multiple countries.',
+    'Daily, weekly, and monthly trends from a range of sources, across multiple countries',
   languageList: [langs.python, langs.sql, langs.css, langs.html],
   toolList: [tools.python.flask, tools.python.jinja2, tools.sqlite],
   buildList: [build.pip, build.digitalOcean, build.nginx],
@@ -76,7 +75,7 @@ const headlineWords = {
 const piptube = {
   ci: false,
   name: 'piptube',
-  description: 'Picture-in-picture wrapper for mpv and youtube-dl.',
+  description: 'Picture-in-picture wrapper for mpv and youtube-dl',
   features: [
     'Video and audio',
     'Play video URL',
@@ -96,8 +95,8 @@ const self = {
   name: 'self.site',
   ghAction: 'deploy',
   altName: 'jgthomas.github.io',
-  description: 'Portfolio website.',
-  detail: 'Responsive site with just the bare-bones tech of the web.',
+  description: 'Portfolio website',
+  detail: 'Responsive site with just the bare-bones tech of the web',
   languageList: [langs.javascript, langs.css, langs.html],
   toolList: [
     tools.web.grid,
@@ -121,9 +120,9 @@ const self = {
 const calcasm = {
   ci: true,
   name: 'calcasm',
-  description: 'Command line calculator written in x86-64 assembly.',
+  description: 'Command line calculator written in x86-64 assembly',
   detail:
-    'All input, output, parsing, and calculation performed in pure assembly, with Linux syscalls.',
+    'All input, output, parsing, and calculation performed in pure assembly, with Linux syscalls',
   languageList: [langs.asm],
   toolList: [tools.asm.as, tools.asm.ld, tools.c.gdb],
   buildList: [build.make, build.travis],
@@ -135,7 +134,7 @@ const draughts = {
   ci: true,
   name: 'draughts',
   altName: 'DraughtsGame',
-  description: 'Desktop draughts application.',
+  description: 'Desktop draughts application',
   features: [
     'Computer player',
     'Save and resume',
@@ -153,8 +152,8 @@ const draughts = {
 const braingame = {
   ci: true,
   name: 'braingame.xyz',
-  description: 'Brain game website.',
-  detail: 'Anagrams, word games, sudoku, and more to come.',
+  description: 'Brain game website',
+  detail: 'Anagrams, word games, sudoku, and more to come',
   languageList: [langs.python, langs.javascript, langs.css, langs.html],
   toolList: [
     tools.python.fastapi,
@@ -183,7 +182,7 @@ const emulator = {
   ci: true,
   name: 'emulator',
   altName: 'chipset_emulator',
-  description: 'Emulator for 4- and 8-bit chipsets.',
+  description: 'Emulator for 4- and 8-bit chipsets',
   features: [
     'Interactive shell',
     'Run program from file',
@@ -203,7 +202,7 @@ const jsoner = {
   ghAction: 'tests',
   name: 'jsoner',
   description: 'JSON Validator',
-  detail: `Built with ${tools.haskell.megaparsec}.`,
+  detail: `Built with ${tools.haskell.megaparsec}`,
   languageList: [langs.haskell],
   toolList: [
     tools.haskell.hspec,
@@ -248,7 +247,7 @@ const dish = {
   ci: true,
   name: 'dish',
   description: 'Docker clone',
-  detail: 'Container management non-solution.',
+  detail: 'Container management non-solution',
   features: [
     'Create new containers',
     'Access and use containers',
