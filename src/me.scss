@@ -1,5 +1,13 @@
 @use 'index';
 
+.main-grid-me {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-row-gap: 1%;
+}
+
 .lang-intro {
   margin-bottom: 3em;
 }
