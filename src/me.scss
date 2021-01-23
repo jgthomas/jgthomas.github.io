@@ -1,3 +1,5 @@
+@use 'index';
+
 .lang-intro {
   margin-bottom: 3em;
 }
@@ -20,4 +22,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.tooling-title {
+  color: index.$highlight-text-color;
 }

@@ -4,6 +4,6 @@
     <img align="center" alt="{{alt}}" width="{{width}}" src="{{icon}}" />
   {{/images}}
   <p>{{{text}}}</p>
-  <p><span class="uses-title">Tooling:</span> {{tools}}</p>
+  <p><span class="tooling-title">Tooling:</span> {{tools}}</p>
 </div>
 {{/languages}}
