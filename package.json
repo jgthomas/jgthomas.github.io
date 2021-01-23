@@ -24,8 +24,8 @@
   "scripts": {
     "lint": "eslint .",
     "build:dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "start:dev": "webpack serve"
+    "start:dev": "webpack serve",
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "mustache": "^4.1.0"
