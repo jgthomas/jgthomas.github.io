@@ -1,5 +1,6 @@
 import { projectsList } from './projects.js';
 import { headerData } from './header.js';
+import { experienceList } from './experience.js';
 import { renderTemplate } from './template.js';
 
 const renderProjectPage = () => {
@@ -9,6 +10,7 @@ const renderProjectPage = () => {
 
 const renderMePage = () => {
   renderTemplate('header', headerData, 'site-header');
+  renderTemplate('experience', experienceList, 'experience');
 };
 
 const renderContent = () => {

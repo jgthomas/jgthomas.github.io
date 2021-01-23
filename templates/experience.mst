@@ -1,0 +1,8 @@
+{{#experience}}
+<div class="lang profile-text">
+  <h3><img align="center" alt="{{alt}}" width="{{width}}" src="{{image}}" /> {{organisation}}</h3>
+  <p>
+    <strong>{{startDate}}-{{endDate}}</strong> &mdash; {{role}}
+  </p>
+</div>
+{{/experience}}

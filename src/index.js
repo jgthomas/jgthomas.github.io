@@ -23,3 +23,4 @@ import '../images/dish.png';
 import '../images/playwords.xyz.png';
 import '../templates/project.mst';
 import '../templates/header.mst';
+import '../templates/experience.mst';
