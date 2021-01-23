@@ -1,6 +1,7 @@
 import './renderProjects.js';
 import './search.js';
 import './index.css';
+import './project.mst';
 import '../images/succ.png';
 import '../images/sudoku_solver.png';
 import '../images/self.site.png';
