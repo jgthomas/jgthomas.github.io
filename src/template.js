@@ -11,6 +11,6 @@ export const renderTemplate = (name, content, position) => {
       document.getElementById(position).innerHTML = rendered;
     })
     .catch((error) =>
-      console.log(`Unable to load template: ${name}. Error ${error.message}`)
+      console.log(`Unable to load template: ${name}. Error: ${error.message}`)
     );
 };
