@@ -8,8 +8,5 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "rules": {},
-  "globals": {
-    "Mustache": true
-  }
+  "rules": {}
 }
