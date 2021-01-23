@@ -1,7 +1,6 @@
 import './renderProjects.js';
 import './search.js';
 import './index.css';
-import './project.mst';
 import '../images/succ.png';
 import '../images/sudoku_solver.png';
 import '../images/self.site.png';
@@ -22,3 +21,4 @@ import '../images/jsoner.png';
 import '../images/foodApi.png';
 import '../images/dish.png';
 import '../images/playwords.xyz.png';
+import '../templates/project.mst';

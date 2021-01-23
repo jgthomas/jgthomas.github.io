@@ -4,7 +4,7 @@ import Mustache from 'mustache';
 const renderProjects = () => {
   const hasProjects = document.getElementById('all-projects');
 
-  fetch('./src/project.mst')
+  fetch('./templates/project.mst')
     .then((response) => response.text())
     .then((template) => {
       if (hasProjects) {
