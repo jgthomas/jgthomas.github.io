@@ -59,21 +59,15 @@ const showAllProjects = () => {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  const searchForm = document.getElementById('search-form');
-
-  if (searchForm) {
+const setupSearch = () => {
+  if (document.getElementById('project-page')) {
+    const searchForm = document.getElementById('search-form');
     searchForm.addEventListener('submit', (e) => {
       e.preventDefault();
       e.stopPropagation();
     });
-  }
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-  const searchBox = document.getElementById('search-bar');
-
-  if (searchBox) {
+    const searchBox = document.getElementById('search-bar');
     searchBox.addEventListener('input', () => {
       const searchTerm = searchBox.value.toLowerCase().trim();
       if (!searchTerm) {
@@ -87,16 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
         searchProjects(searchTerm);
       }
     });
-  }
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-  const clearButton = document.getElementById('clear-button');
-
-  if (clearButton) {
+    const clearButton = document.getElementById('clear-button');
     clearButton.addEventListener('click', () => {
       showAllProjects();
       hideResetButton();
     });
   }
-});
+};
+
+document.addEventListener('DOMContentLoaded', setupSearch);
