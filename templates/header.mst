@@ -1,0 +1,6 @@
+<h1 class="heading">{{siteTitle}}</h1>
+<nav>
+  <a class="section-link" href="{{homePage}}">{{homeTitle}}</a>
+  <a class="section-link" href="{{mePage}}">{{meTitle}}</a>
+  <a class="section-link" href="{{cvLink}}">{{cvTitle}}</a>
+</nav>
