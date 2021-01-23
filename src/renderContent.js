@@ -1,7 +1,7 @@
-import { projectsList } from './projects.js';
-import { headerData } from './header.js';
-import { experienceList } from './experience.js';
-import { languageList } from './languages.js';
+import { projectsList } from '../data/projects.js';
+import { headerData } from '../data/header.js';
+import { experienceList } from '../data/experience.js';
+import { languageList } from '../data/languages.js';
 import { renderTemplate } from './template.js';
 
 const renderProjectPage = () => {

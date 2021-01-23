@@ -1,4 +1,4 @@
-import { projectData, projectStatus, status } from './projects.js';
+import { projectData, projectStatus, status } from '../data/projects.js';
 
 const searchProjects = (searchTerm) => {
   const projects = document.getElementsByClassName('project');
