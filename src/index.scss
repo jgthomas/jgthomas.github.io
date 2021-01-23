@@ -5,7 +5,6 @@ $heading-color: dodgerblue;
 $standard-text-color: dimgrey;
 $standard-text-color-dark: darkslategrey;
 $highlight-text-color: cornflowerblue;
-$alert-text-color: tomato;
 
 html,
 body {
@@ -38,41 +37,6 @@ nav {
     color: $standard-text-color;
     padding: 1%;
   }
-}
-
-.search-form {
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  width: 90%;
-  height: auto;
-  margin: auto;
-  text-align: center;
-}
-
-#search-bar {
-  width: 50%;
-  padding: 20px;
-  font-size: 1.15em;
-  margin: auto;
-  display: block;
-  margin-bottom: 1.15em;
-  color: $highlight-text-color;
-  border-radius: 2%;
-  border: none;
-  text-decoration: none;
-}
-
-.clear-button {
-  text-decoration: none;
-  padding: 5px;
-  font-size: large;
-  border: none;
-  color: $alert-text-color;
-  background-color: $box-background-color;
-  -webkit-appearance: none;
-  border-radius: 5px;
-  margin: auto;
 }
 
 .hidden {
@@ -114,10 +78,6 @@ nav {
    ##Device = absurdly large monitors
   */
 @media only screen and (min-width: 2450px) {
-  .project-grid {
-    min-width: 50%;
-    max-width: 50%;
-  }
   .full-width {
     width: 45%;
   }
@@ -143,10 +103,6 @@ nav {
     ##Screen = B/w 1025px to 1280px
   */
 @media (min-width: 1025px) and (max-width: 1280px) {
-  .project-grid {
-    min-width: 95%;
-    max-width: 95%;
-  }
   .full-width {
     width: 90%;
   }
@@ -194,10 +150,6 @@ nav {
   .full-width {
     width: 95%;
   }
-  #search-bar {
-    width: 75%;
-    margin-top: 1em;
-  }
 }
 
 /*
@@ -206,10 +158,6 @@ nav {
 @media (min-width: 320px) and (max-width: 401px) {
   .full-width {
     width: 90%;
-  }
-  #search-bar {
-    width: 75%;
-    margin-top: 1em;
   }
 }
 

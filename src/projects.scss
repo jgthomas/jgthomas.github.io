@@ -141,6 +141,27 @@ $retired-color: darkgray;
 }
 
 /*
+   ##Device = absurdly large monitors
+  */
+@media only screen and (min-width: 2450px) {
+  .project-grid {
+    min-width: 50%;
+    max-width: 50%;
+  }
+}
+
+/*
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .project-grid {
+    min-width: 95%;
+    max-width: 95%;
+  }
+}
+
+/*
     ##Device = Tablets, Ipads (portrait)
     ##Screen = B/w 768px to 1024px
   */
