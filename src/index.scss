@@ -35,13 +35,13 @@ body {
 nav {
   text-align: center;
   margin-top: 2em;
-}
 
-.section-link {
-  text-decoration: none;
-  outline: none;
-  color: dimgrey;
-  padding: 1%;
+  a {
+    text-decoration: none;
+    outline: none;
+    color: $standard-text-color;
+    padding: 1%;
+  }
 }
 
 .search-form {
@@ -433,7 +433,9 @@ nav {
 }
 
 @media (hover: hover) {
-  .section-link:hover {
-    color: $heading-color;
+  nav {
+    a:hover {
+      color: $heading-color;
+    }
   }
 }
