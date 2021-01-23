@@ -2,6 +2,7 @@ import './renderContent.js';
 import './search.js';
 import './index.scss';
 import './projects.scss';
+import './me.scss';
 import '../images/succ.png';
 import '../images/sudoku_solver.png';
 import '../images/self.site.png';
