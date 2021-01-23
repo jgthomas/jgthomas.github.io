@@ -2,13 +2,22 @@ import { projectsList } from './projects.js';
 import { headerData } from './header.js';
 import { renderTemplate } from './template.js';
 
-const renderContent = () => {
+const renderProjectPage = () => {
   renderTemplate('header', headerData, 'site-header');
+  renderTemplate('project', projectsList, 'all-projects');
+};
 
-  const hasProjects = document.getElementById('all-projects');
+const renderMePage = () => {
+  renderTemplate('header', headerData, 'site-header');
+};
 
-  if (hasProjects) {
-    renderTemplate('project', projectsList, 'all-projects');
+const renderContent = () => {
+  if (document.getElementById('project-page')) {
+    renderProjectPage();
+  }
+
+  if (document.getElementById('me-page')) {
+    renderMePage();
   }
 };
 
