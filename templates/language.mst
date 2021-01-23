@@ -1,0 +1,9 @@
+{{#languages}}
+<div class="lang profile-text">
+  {{#images}}
+    <img align="center" alt="{{alt}}" width="{{width}}" src="{{icon}}" />
+  {{/images}}
+  <p>{{{text}}}</p>
+  <p><span class="uses-title">Tooling:</span> {{tools}}</p>
+</div>
+{{/languages}}
