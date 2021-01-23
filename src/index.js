@@ -1,6 +1,7 @@
 import './renderContent.js';
 import './search.js';
 import './index.css';
+import './index.scss';
 import '../images/succ.png';
 import '../images/sudoku_solver.png';
 import '../images/self.site.png';
