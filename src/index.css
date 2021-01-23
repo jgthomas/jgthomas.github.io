@@ -85,14 +85,6 @@ nav {
   margin-bottom: 0;
 }
 
-.tagline {
-  text-align: center;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1em;
-  color: slategrey;
-}
-
 .main-grid {
   margin-top: 1em;
   display: grid;
