@@ -1,5 +1,15 @@
-$background-color: cornflowerblue;
-$text-color: whitesmoke;
+$page-background-color: cornflowerblue;
+$box-background-color: whitesmoke;
+$heading-color: dodgerblue;
+
+$standard-text-color: dimgrey;
+$standard-text-color-dark: darkslategrey;
+$highlight-text-color: cornflowerblue;
+$alert-text-color: tomato;
+
+$active-color: #2dc937;
+$archived-color: #e7b416;
+$retired-color: darkgray;
 
 html,
 body {
@@ -8,6 +18,422 @@ body {
   font-size: 16px;
   font-family: 'Chivo', sans-serif;
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: $background-color;
-  color: $text-color;
+  background-color: $page-background-color;
+}
+
+.full-width {
+  width: 65%;
+  margin: auto;
+  margin-top: 0;
+  background-color: $box-background-color;
+  border-radius: 0 0 2% 2%;
+  padding: 1%;
+  margin-bottom: 2%;
+  font-weight: 400;
+}
+
+nav {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.section-link {
+  text-decoration: none;
+  outline: none;
+  color: dimgrey;
+  padding: 1%;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  width: 90%;
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+
+#search-bar {
+  width: 50%;
+  padding: 20px;
+  font-size: 1.15em;
+  margin: auto;
+  display: block;
+  margin-bottom: 1.15em;
+  color: $highlight-text-color;
+  border-radius: 2%;
+  border: none;
+  text-decoration: none;
+}
+
+.clear-button {
+  text-decoration: none;
+  padding: 5px;
+  font-size: large;
+  border: none;
+  color: $alert-text-color;
+  background-color: $box-background-color;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: $heading-color;
+}
+
+.main-grid {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-row-gap: 1%;
+  grid-template-areas:
+    'projects'
+    'key';
+}
+
+.main-project-grid {
+  margin-top: 0em;
+}
+
+.project-grid {
+  display: grid;
+  grid-area: projects;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1%;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.key-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1%;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.key-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: darkslategrey;
+  text-align: center;
+  width: 100%;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: $box-background-color;
+  border-radius: 2%;
+  min-width: 95%;
+  max-width: 95%;
+  margin-top: 20px;
+  align-self: stretch;
+}
+
+.title-line {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.status-light {
+  margin-right: auto;
+  font-size: larger;
+  width: 10%;
+}
+
+.project-title {
+  font-size: 150%;
+  margin-right: auto;
+  margin-left: auto;
+  color: $heading-color;
+}
+
+.description {
+  color: $standard-text-color;
+  width: 80%;
+  font-size: larger;
+  margin: auto;
+}
+
+.detail {
+  font-size: 90%;
+}
+
+.tech-used {
+  color: $standard-text-color;
+  width: 70%;
+  margin: auto;
+  text-align: left;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+.status-line {
+  align-self: end;
+  color: $standard-text-color-dark;
+  font-size: large;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.link-image {
+  width: 26px;
+}
+
+.uses-title {
+  color: $highlight-text-color;
+}
+
+.feature-list {
+  width: 50%;
+  margin: auto;
+  text-align: left;
+  font-size: 90%;
+}
+
+.project-image {
+  max-width: 50%;
+  height: auto;
+  padding: 20px;
+  margin: auto;
+}
+
+.profile-text {
+  color: $standard-text-color;
+  min-width: 80%;
+  max-width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+.lang-intro {
+  margin-bottom: 3em;
+}
+
+.lang {
+  margin-bottom: 2.5em;
+}
+
+.tool-icon-list {
+  text-align: center;
+}
+
+.tool-icon {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.active {
+  color: $active-color;
+}
+
+.archived {
+  color: $archived-color;
+}
+
+.retired {
+  color: $retired-color;
+}
+
+.me-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/*
+   ##Device = absurdly large monitors
+  */
+@media only screen and (min-width: 2450px) {
+  .project-grid {
+    min-width: 50%;
+    max-width: 50%;
+  }
+  .full-width {
+    width: 45%;
+  }
+  .profile-text {
+    min-width: 60%;
+    max-width: 60%;
+  }
+}
+
+/*
+   ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops
+  */
+@media (min-width: 1281px) {
+  .profile-text {
+    min-width: 60%;
+    max-width: 60%;
+  }
+}
+
+/*
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .project-grid {
+    min-width: 95%;
+    max-width: 95%;
+  }
+  .full-width {
+    width: 90%;
+  }
+  .profile-text {
+    min-width: 60%;
+    max-width: 60%;
+  }
+}
+
+/*
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project-grid {
+    min-width: 95%;
+    max-width: 95%;
+    grid-template-columns: 1fr;
+  }
+  .project {
+    min-width: 80%;
+    max-width: 80%;
+  }
+  .full-width {
+    width: 75%;
+  }
+}
+
+/*
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .project-grid {
+    min-width: 95%;
+    max-width: 95%;
+    grid-template-columns: 1fr;
+  }
+  .full-width {
+    width: 90%;
+  }
+  .feature-list {
+    width: 80%;
+  }
+}
+
+/*
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+@media (min-width: 481px) and (max-width: 767px) {
+  .project-grid {
+    min-width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .project {
+    min-width: 95%;
+    max-width: 95%;
+  }
+  .full-width {
+    width: 95%;
+  }
+  .feature-list {
+    width: 70%;
+  }
+}
+
+/*
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+@media (min-width: 320px) and (max-width: 480px) {
+  .project-grid {
+    min-width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .project {
+    min-width: 95%;
+    max-width: 95%;
+  }
+  .full-width {
+    width: 95%;
+  }
+  .feature-list {
+    width: 70%;
+  }
+  #search-bar {
+    width: 75%;
+    margin-top: 1em;
+  }
+}
+
+/*
+   ##Device = very small phones
+   */
+@media (min-width: 320px) and (max-width: 401px) {
+  .project-grid {
+    min-width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .project {
+    min-width: 90%;
+    max-width: 90%;
+  }
+  .full-width {
+    width: 90%;
+  }
+  .feature-list {
+    width: 80%;
+  }
+  #search-bar {
+    width: 75%;
+    margin-top: 1em;
+  }
+}
+
+@media (hover: hover) {
+  .section-link:hover {
+    color: $heading-color;
+  }
 }
