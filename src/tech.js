@@ -42,6 +42,7 @@ export const tools = {
   java: {
     javafx: 'JavaFX',
     junit: 'JUnit',
+    jacoco: 'JaCoCo',
   },
   asm: {
     as: 'as',
@@ -91,4 +92,11 @@ export const build = {
   ghactions: 'GitHub Actions',
   npm: 'npm',
   serverless: 'Serverless Framework',
+  gcc: 'GCC',
+};
+
+export const editors = {
+  vscode: 'VS Code',
+  vim: 'Vim',
+  intellij: 'IntelliJ',
 };
