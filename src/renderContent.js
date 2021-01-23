@@ -1,7 +1,7 @@
 import { projectsList } from './projects.js';
 import { renderTemplate } from './template.js';
 
-const renderProjects = () => {
+const renderContent = () => {
   const hasProjects = document.getElementById('all-projects');
 
   if (hasProjects) {
@@ -9,4 +9,4 @@ const renderProjects = () => {
   }
 };
 
-document.addEventListener('DOMContentLoaded', renderProjects);
+document.addEventListener('DOMContentLoaded', renderContent);

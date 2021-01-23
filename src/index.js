@@ -1,4 +1,4 @@
-import './renderProjects.js';
+import './renderContent.js';
 import './search.js';
 import './index.css';
 import '../images/succ.png';
