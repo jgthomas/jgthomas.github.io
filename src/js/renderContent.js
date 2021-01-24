@@ -1,10 +1,10 @@
-import { projectsList } from '../data/projects.js';
-import { headerData } from '../data/header.js';
-import { experienceList } from '../data/experience.js';
-import { languageList } from '../data/languages.js';
+import { projectsList } from './projects.js';
+import { headerData } from './header.js';
+import { experienceList } from './experience.js';
+import { languageList } from './languages.js';
 import Mustache from 'mustache';
 
-const templatePath = './templates';
+const templatePath = './src/templates';
 const templateSuffix = '.mst';
 
 const renderTemplate = (name, content, position) => {

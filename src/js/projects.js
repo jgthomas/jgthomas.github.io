@@ -292,7 +292,7 @@ const buildRepoLink = (project) => {
 };
 
 const buildImageName = (name) => {
-  return `images/${name.replaceAll(' ', '_')}.png`;
+  return `src/img/${name.replaceAll(' ', '_')}.png`;
 };
 
 const buildProject = (project) => {

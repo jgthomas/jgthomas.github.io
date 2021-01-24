@@ -1,5 +1,5 @@
 const iconWidth = '36px';
-const imagePath = 'images';
+const imagePath = 'src/img';
 
 const selfTeaching = {
   organisation: 'Self-teaching',
