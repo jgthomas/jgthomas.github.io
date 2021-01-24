@@ -1,3 +1,5 @@
+@import 'layouts';
+
 $page-background-color: cornflowerblue;
 $box-background-color: whitesmoke;
 $heading-color: dodgerblue;
@@ -65,10 +67,7 @@ nav {
   text-align: left;
 }
 
-/*
-   ##Device = absurdly large monitors
-  */
-@media only screen and (min-width: 2450px) {
+@include respond(widescreen) {
   .full-width {
     width: 45%;
   }
@@ -78,22 +77,14 @@ nav {
   }
 }
 
-/*
-   ##Device = Desktops
-    ##Screen = 1281px to higher resolution desktops
-  */
-@media (min-width: 1281px) {
+@include respond(desktop) {
   .profile-text {
     min-width: 60%;
     max-width: 60%;
   }
 }
 
-/*
-    ##Device = Laptops, Desktops
-    ##Screen = B/w 1025px to 1280px
-  */
-@media (min-width: 1025px) and (max-width: 1280px) {
+@include respond(laptop) {
   .full-width {
     width: 90%;
   }
@@ -103,56 +94,37 @@ nav {
   }
 }
 
-/*
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-  */
-@media (min-width: 768px) and (max-width: 1024px) {
+@include respond(tablet) {
   .full-width {
     width: 75%;
   }
 }
 
-/*
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-  */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@include respond(tabletLandscape) {
   .full-width {
     width: 90%;
   }
 }
 
-/*
-    ##Device = Low Resolution Tablets, Mobiles (Landscape)
-    ##Screen = B/w 481px to 767px
-  */
-@media (min-width: 481px) and (max-width: 767px) {
+@include respond(mobileLarge) {
   .full-width {
     width: 95%;
   }
 }
 
-/*
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
-  */
-@media (min-width: 320px) and (max-width: 480px) {
+@include respond(mobileSmall) {
   .full-width {
     width: 95%;
   }
 }
 
-/*
-   ##Device = very small phones
-   */
-@media (min-width: 320px) and (max-width: 401px) {
+@include respond(mobileTiny) {
   .full-width {
     width: 90%;
   }
 }
 
-@media (hover: hover) {
+@include feature(hover) {
   nav {
     a:hover {
       color: $heading-color;
