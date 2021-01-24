@@ -79,6 +79,7 @@ const web = {
     tools.prettier,
     tools.web.webpack,
     tools.web.babel,
+    tools.web.sass,
     editors.vscode,
   ],
 };
