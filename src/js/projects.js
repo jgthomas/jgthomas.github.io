@@ -225,8 +225,8 @@ const foodApi = {
     'Food pantry record',
     'Recipe book',
     'Matches recipes to food',
-    'Suggests alternatives',
-    'Replacement ingredients',
+    'Suggests options',
+    'Alternate ingredients',
   ],
   languageList: [langs.javascript],
   toolList: [
