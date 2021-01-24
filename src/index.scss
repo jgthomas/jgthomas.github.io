@@ -41,6 +41,18 @@ nav {
   }
 }
 
+.key-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1%;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 1em;
+}
+
 .hidden {
   position: absolute;
   overflow: hidden;
