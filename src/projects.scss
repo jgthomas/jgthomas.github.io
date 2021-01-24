@@ -1,4 +1,5 @@
 @use 'index';
+@import 'layouts';
 
 $active-color: #2dc937;
 $archived-color: #e7b416;
@@ -145,32 +146,21 @@ $retired-color: darkgray;
   color: $retired-color;
 }
 
-/*
-   ##Device = absurdly large monitors
-  */
-@media only screen and (min-width: 2450px) {
+@include respond(widescreen) {
   .project-grid {
     min-width: 50%;
     max-width: 50%;
   }
 }
 
-/*
-    ##Device = Laptops, Desktops
-    ##Screen = B/w 1025px to 1280px
-  */
-@media (min-width: 1025px) and (max-width: 1280px) {
+@include respond(laptop) {
   .project-grid {
     min-width: 95%;
     max-width: 95%;
   }
 }
 
-/*
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-  */
-@media (min-width: 768px) and (max-width: 1024px) {
+@include respond(tablet) {
   .project-grid {
     min-width: 95%;
     max-width: 95%;
@@ -182,11 +172,7 @@ $retired-color: darkgray;
   }
 }
 
-/*
-      ##Device = Tablets, Ipads (landscape)
-      ##Screen = B/w 768px to 1024px
-    */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@include respond(tabletLandscape) {
   .project-grid {
     min-width: 95%;
     max-width: 95%;
@@ -197,11 +183,7 @@ $retired-color: darkgray;
   }
 }
 
-/*
-      ##Device = Low Resolution Tablets, Mobiles (Landscape)
-      ##Screen = B/w 481px to 767px
-    */
-@media (min-width: 481px) and (max-width: 767px) {
+@include respond(mobileLarge) {
   .project-grid {
     min-width: 100%;
     max-width: 100%;
@@ -216,11 +198,7 @@ $retired-color: darkgray;
   }
 }
 
-/*
-      ##Device = Most of the Smartphones Mobiles (Portrait)
-      ##Screen = B/w 320px to 479px
-    */
-@media (min-width: 320px) and (max-width: 480px) {
+@include respond(mobileSmall) {
   .project-grid {
     min-width: 100%;
     max-width: 100%;
@@ -235,10 +213,7 @@ $retired-color: darkgray;
   }
 }
 
-/*
-     ##Device = very small phones
-     */
-@media (min-width: 320px) and (max-width: 401px) {
+@include respond(mobileTiny) {
   .project-grid {
     min-width: 100%;
     max-width: 100%;
