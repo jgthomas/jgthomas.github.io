@@ -1,5 +1,7 @@
 @use 'index';
 
+$language-text-color: tomato;
+
 .main-grid-me {
   margin-top: 1em;
   display: grid;
@@ -14,6 +16,10 @@
 
 .lang {
   margin-bottom: 2.5em;
+}
+
+.language-name {
+  color: $language-text-color;
 }
 
 .tool-icon-list {
