@@ -1,9 +1,9 @@
 import './renderContent.js';
 import './search.js';
-import './style/index.scss';
-import './style/projects.scss';
-import './style/search.scss';
-import './style/me.scss';
+import './scss/index.scss';
+import './scss/projects.scss';
+import './scss/search.scss';
+import './scss/me.scss';
 import '../images/succ.png';
 import '../images/sudoku_solver.png';
 import '../images/self.site.png';
