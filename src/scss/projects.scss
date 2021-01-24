@@ -142,6 +142,13 @@ $retired-color: darkgray;
   }
 }
 
+@include respond(desktop) {
+  .project-grid {
+    min-width: 70%;
+    max-width: 70%;
+  }
+}
+
 @include respond(laptop) {
   .project-grid {
     min-width: 95%;
