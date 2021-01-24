@@ -3,7 +3,7 @@
   {{#images}}
     <img align="center" alt="{{alt}}" width="{{width}}" src="{{icon}}" />
   {{/images}}
-  <p>{{{text}}}</p>
   <p><span class="tooling-title">Tooling:</span> {{tools}}</p>
+  <p>{{{text}}}</p>
 </div>
 {{/languages}}
