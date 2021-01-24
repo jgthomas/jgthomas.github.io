@@ -59,6 +59,7 @@ export const tools = {
     webAssembly: 'WebAssembly',
     webpack: 'webpack',
     babel: 'Babel',
+    sass: 'Sass',
   },
   aws: {
     aws: 'AWS',

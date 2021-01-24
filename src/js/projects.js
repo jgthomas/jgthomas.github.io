@@ -105,6 +105,7 @@ const self = {
     tools.web.mustache,
     tools.javascript.eslint,
     tools.prettier,
+    tools.web.sass,
   ],
   buildList: [
     build.yarn,
