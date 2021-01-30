@@ -1,4 +1,4 @@
-@use 'index';
+@use 'variables';
 
 $language-text-color: tomato;
 
@@ -39,5 +39,5 @@ $language-text-color: tomato;
 }
 
 .tooling-title {
-  color: index.$highlight-text-color;
+  color: variables.$highlight-text-color;
 }

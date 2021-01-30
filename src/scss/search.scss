@@ -1,4 +1,4 @@
-@use 'index';
+@use 'variables';
 @import 'layouts';
 
 $alert-text-color: tomato;
@@ -20,7 +20,7 @@ $alert-text-color: tomato;
   margin: auto;
   display: block;
   margin-bottom: 1.15em;
-  color: index.$highlight-text-color;
+  color: variables.$highlight-text-color;
   border-radius: 2%;
   border: none;
   text-decoration: none;
@@ -32,7 +32,7 @@ $alert-text-color: tomato;
   font-size: large;
   border: none;
   color: $alert-text-color;
-  background-color: index.$box-background-color;
+  background-color: variables.$box-background-color;
   -webkit-appearance: none;
   border-radius: 5px;
   margin: auto;

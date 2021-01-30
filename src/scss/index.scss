@@ -1,12 +1,5 @@
+@use 'variables';
 @import 'layouts';
-
-$page-background-color: cornflowerblue;
-$box-background-color: whitesmoke;
-$heading-color: dodgerblue;
-
-$standard-text-color: dimgrey;
-$standard-text-color-dark: darkslategrey;
-$highlight-text-color: cornflowerblue;
 
 html,
 body {
@@ -15,14 +8,14 @@ body {
   font-size: 16px;
   font-family: 'Chivo', sans-serif;
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: $page-background-color;
+  background-color: variables.$page-background-color;
 }
 
 .full-width {
   width: 65%;
   margin: auto;
   margin-top: 0;
-  background-color: $box-background-color;
+  background-color: variables.$box-background-color;
   border-radius: 0 0 2% 2%;
   padding: 1%;
   margin-bottom: 2%;
@@ -36,7 +29,7 @@ nav {
   a {
     text-decoration: none;
     outline: none;
-    color: $standard-text-color;
+    color: variables.$standard-text-color;
     padding: 1%;
   }
 }
@@ -68,11 +61,11 @@ nav {
   text-align: center;
   font-weight: 400;
   margin-bottom: 0;
-  color: $heading-color;
+  color: variables.$heading-color;
 }
 
 .profile-text {
-  color: $standard-text-color;
+  color: variables.$standard-text-color;
   min-width: 80%;
   max-width: 80%;
   margin: auto;
@@ -139,7 +132,7 @@ nav {
 @include feature(hover) {
   nav {
     a:hover {
-      color: $heading-color;
+      color: variables.$heading-color;
     }
   }
 }
