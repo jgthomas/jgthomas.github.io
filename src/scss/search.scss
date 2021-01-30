@@ -39,20 +39,6 @@ $alert-text-color: tomato;
   margin: auto;
 }
 
-/*@include respond(mobileSmall) {
-  #search-bar {
-    width: 75%;
-    margin-top: 1em;
-  }
-}
-
-@include respond(mobileTiny) {
-  #search-bar {
-    width: 75%;
-    margin-top: 1em;
-  }
-}*/
-
 /* Assume mobile then apply styles for larger devices */
 
 @include break(tabletPortrait) {
