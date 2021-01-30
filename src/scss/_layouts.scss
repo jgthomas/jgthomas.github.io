@@ -1,12 +1,6 @@
 @mixin break($breakpoint) {
-  @if $breakpoint==widescreen {
-    @media only screen and (min-width: 2560px) {
-      @content;
-    }
-  }
-
-  @if $breakpoint==desktop {
-    @media only screen and (min-width: 1680px) {
+  @if $breakpoint==tabletPortrait {
+    @media only screen and (min-width: 768px) {
       @content;
     }
   }
@@ -17,8 +11,14 @@
     }
   }
 
-  @if $breakpoint==tabletPortrait {
-    @media only screen and (min-width: 768px) {
+  @if $breakpoint==desktop {
+    @media only screen and (min-width: 1680px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==widescreen {
+    @media only screen and (min-width: 2560px) {
       @content;
     }
   }
