@@ -13,10 +13,11 @@ const python = {
       icon: `${devIconsUrl}/python/python-original.svg`,
     },
   ],
-  text: `My first language! I started using <span class="language-name">${langs.python}</span> during my PhD, running multi-agent evolutionary simulations. This might sound impressive, but
-  looking back at that code now, I can tell you it is <em>not</em>. Still, there's something about the beauty of well-written Python code, it can flow
-  almost like sentences in a natural language. Also, is there anything that <em>isn't</em> in the standard library? Just wish it was statically typed,
-  once I had a taste of that, its been hard to go back.`,
+  text: `My first language! I started using <span class="language-name">${langs.python}</span> during my PhD, running multi-agent evolutionary simulations.
+  When I launched myself back into programming a few years later, ${langs.python} was where I began.
+  Taking quizzes in the SoloLearn app was soon followed by making console-based games and spinning up websites using ${tools.python.flask}.
+  I returned to ${langs.python} for the final project of my computer science degree, testing self-adaptive evolutionary algorithms as solvers of the
+  Boolean satisfiability problem (SAT).`,
   tooling: [
     build.poetry,
     tools.python.pytest,
@@ -36,9 +37,9 @@ const c = {
       icon: `${devIconsUrl}/c/c-original.svg`,
     },
   ],
-  text: `I tried to learn algorithms and data structures in Python, but Python just does too much for you. What was the point of this 'linked list',
-  if the Python list was right there? So I switched to <span class="language-name">${langs.c}</span>, which forced me to grapple with pointers and manual memory management, and to
-  implement things myself that are just part of the standard libraries of other languages. I don't expect I'll ever work in C, but
+  text: `I tried to learn algorithms and data structures in ${langs.python}, but ${langs.python} just does too much for you. What was the point of this 'linked list',
+  if the ${langs.python} list was right there? So I switched to <span class="language-name">${langs.c}</span>, which forced me to grapple with pointers and manual memory management, and to
+  implement things myself that are just part of the standard libraries of other languages. I don't expect I'll ever work in ${langs.c}, but
   using it has deeply enriched my understanding of other languages and programming in general.`,
   tooling: [
     build.gcc,
