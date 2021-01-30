@@ -86,11 +86,14 @@ nav {
 
 @include break(tabletPortrait) {
   .full-width {
-    width: 90%;
+    width: 80%;
   }
 }
 
 @include break(tabletLandscape) {
+  .full-width {
+    width: 90%;
+  }
   .profile-text {
     min-width: 60%;
     max-width: 60%;

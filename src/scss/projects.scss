@@ -131,19 +131,18 @@ $retired-color: darkgray;
 
 @include break(tabletPortrait) {
   .project-grid {
-    min-width: 95%;
-    max-width: 95%;
+    min-width: 85%;
+    max-width: 85%;
   }
   .feature-list {
     width: 80%;
   }
 }
 
-@include break(tabletPortrait) {
-}
-
 @include break(tabletLandscape) {
   .project-grid {
+    min-width: 95%;
+    max-width: 95%;
     grid-template-columns: 1fr 1fr;
   }
 }
