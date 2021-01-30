@@ -111,3 +111,13 @@ nav {
     width: 45%;
   }
 }
+
+/* Apply styles based on other features */
+
+@include feature(hover) {
+  nav {
+    a:hover {
+      color: variables.$heading-color;
+    }
+  }
+}
