@@ -146,9 +146,6 @@ $retired-color: darkgray;
   .project-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .feature-list {
-    width: 80%;
-  }
 }
 
 @include break(desktop) {
