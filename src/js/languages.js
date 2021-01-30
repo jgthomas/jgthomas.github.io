@@ -111,7 +111,7 @@ const haskell = {
     },
   ],
   text: `Learning <span class="language-name">${langs.haskell}</span> opened up the entire mental landscape of functional programming for me.
-  It is also the language in which I've written my most significant project to date. Don't really do 'favourites', but if I did, Haskell would be my favourite language.
+  Don't really do 'favourites', but if I did, ${langs.haskell} would be my favourite language.
   The type system is amazing. Sum types and pattern matching are beautiful&#8212;as is the ability to control how much 'power' a function has, from a simple pure function,
   to selecting from the hierarchy of functor, applicative, and <strike>burrito</strike> monad.`,
   tooling: [
