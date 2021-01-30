@@ -12,7 +12,7 @@ body {
 }
 
 .full-width {
-  width: 65%;
+  width: 95%;
   margin: auto;
   margin-top: 0;
   background-color: variables.$box-background-color;
@@ -82,7 +82,37 @@ nav {
   text-align: left;
 }
 
-@include respond(widescreen) {
+/* Assume mobile then apply styles for larger devices */
+
+@include break(tabletPortrait) {
+  .full-width {
+    width: 90%;
+  }
+}
+
+@include break(tabletLandscape) {
+  .full-width {
+    width: 90%;
+  }
+  .profile-text {
+    min-width: 60%;
+    max-width: 60%;
+  }
+}
+
+@include break(desktop) {
+  .full-width {
+    width: 60%;
+  }
+}
+
+@include break(widescreen) {
+  .full-width {
+    width: 45%;
+  }
+}
+
+/*@include respond(widescreen) {
   .full-width {
     width: 45%;
   }
@@ -145,4 +175,4 @@ nav {
       color: variables.$heading-color;
     }
   }
-}
+}*/

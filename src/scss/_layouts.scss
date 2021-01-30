@@ -48,6 +48,32 @@
   }
 }
 
+@mixin break($breakpoint) {
+  @if $breakpoint==widescreen {
+    @media only screen and (min-width: 2560px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop {
+    @media only screen and (min-width: 1680px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletLandscape {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletPortrait {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+}
+
 @mixin feature($feature) {
   @if $feature==hover {
     @content;
