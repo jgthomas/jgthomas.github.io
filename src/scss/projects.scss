@@ -17,12 +17,14 @@ $retired-color: darkgray;
 .project-grid {
   display: grid;
   grid-area: projects;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-column-gap: 1%;
   align-items: center;
   justify-items: center;
   justify-content: space-evenly;
-  width: 80%;
+  //width: 80%;
+  min-width: 100%;
+  max-width: 100%;
   margin: auto;
   text-align: center;
   margin-bottom: 1em;
@@ -100,7 +102,7 @@ $retired-color: darkgray;
 }
 
 .feature-list {
-  width: 50%;
+  width: 70%;
   margin: auto;
   text-align: left;
   font-size: 90%;
@@ -125,7 +127,45 @@ $retired-color: darkgray;
   color: $retired-color;
 }
 
-@include respond(widescreen) {
+/* Assume mobile then apply styles for larger devices */
+
+@include break(tabletPortrait) {
+  .project-grid {
+    min-width: 95%;
+    max-width: 95%;
+  }
+  .feature-list {
+    width: 80%;
+  }
+}
+
+@include break(tabletPortrait) {
+}
+
+@include break(tabletLandscape) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .feature-list {
+    width: 80%;
+  }
+}
+
+@include break(desktop) {
+  .project-grid {
+    min-width: 65%;
+    max-width: 65%;
+  }
+}
+
+@include break(widescreen) {
+  .project-grid {
+    min-width: 50%;
+    max-width: 50%;
+  }
+}
+
+/*@include respond(widescreen) {
   .project-grid {
     min-width: 50%;
     max-width: 50%;
@@ -205,4 +245,4 @@ $retired-color: darkgray;
   .feature-list {
     width: 80%;
   }
-}
+}*/
