@@ -46,6 +46,16 @@ nav {
   margin-top: 1em;
 }
 
+.key-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: darkslategrey;
+  text-align: center;
+  width: 100%;
+  margin-top: 1em;
+}
+
 .hidden {
   position: absolute;
   overflow: hidden;

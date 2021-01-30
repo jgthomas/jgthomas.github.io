@@ -28,16 +28,6 @@ $retired-color: darkgray;
   margin-bottom: 1em;
 }
 
-.key-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: darkslategrey;
-  text-align: center;
-  width: 100%;
-  margin-top: 1em;
-}
-
 .project {
   display: grid;
   grid-template-columns: 1fr;
