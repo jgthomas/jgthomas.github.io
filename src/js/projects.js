@@ -113,6 +113,7 @@ const self = {
     tools.web.babel,
     build.ghactions,
     build.ghpages,
+    build.depfu,
   ],
   year: '2019',
   status: status.active,
