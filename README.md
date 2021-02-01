@@ -1,1 +1,1 @@
-# jgthomas.github.io ![Deploy](https://github.com/jgthomas/jgthomas.github.io/workflows/deploy/badge.svg)
+# jgthomas.github.io ![Deploy](https://github.com/jgthomas/jgthomas.github.io/workflows/deploy/badge.svg) [![Depfu](https://badges.depfu.com/badges/d022aa35bf7db80af8ba905c158a9e38/overview.svg)](https://depfu.com/github/jgthomas/jgthomas.github.io?project_id=21666)
