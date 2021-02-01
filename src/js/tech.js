@@ -39,6 +39,7 @@ export const tools = {
     react: 'React',
     eslint: 'ESLint',
     node: 'Node.js',
+    jest: 'Jest',
   },
   java: {
     javafx: 'JavaFX',
@@ -95,6 +96,7 @@ export const build = {
   npm: 'npm',
   serverless: 'Serverless Framework',
   gcc: 'GCC',
+  depfu: 'Depfu',
 };
 
 export const editors = {

@@ -231,6 +231,7 @@ const foodApi = {
   ],
   languageList: [langs.javascript],
   toolList: [
+    tools.javascript.jest,
     tools.javascript.node,
     tools.aws.aws,
     tools.aws.lambda,
@@ -239,7 +240,13 @@ const foodApi = {
     tools.javascript.eslint,
     tools.prettier,
   ],
-  buildList: [build.npm, build.ghactions, build.serverless],
+  buildList: [
+    build.npm,
+    build.ghactions,
+    build.serverless,
+    build.codecov,
+    build.depfu,
+  ],
   year: '2021',
   status: status.active,
 };

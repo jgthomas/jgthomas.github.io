@@ -78,6 +78,7 @@ const web = {
     build.yarn,
     tools.javascript.eslint,
     tools.prettier,
+    tools.javascript.jest,
     tools.web.webpack,
     tools.web.babel,
     tools.web.sass,
