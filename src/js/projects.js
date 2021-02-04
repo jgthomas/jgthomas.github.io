@@ -243,8 +243,8 @@ const foodApi = {
   ],
   buildList: [
     build.npm,
-    build.webpack,
-    build.javascript.babel,
+    build.web.webpack,
+    build.web.babel,
     build.ghactions,
     build.serverless,
     build.codecov,
