@@ -1,5 +1,23 @@
-import { projectData, projectStatus, projectLanguage } from './projects.js';
-import { SearchType, findSearchType } from './searchType.js';
+import { projects, status } from './projects.js';
+import SearchType from './searchType.js';
+import { langs } from './tech.js';
+
+export const projectData = (name) => {
+  const data = projects[name];
+  const detail = data.detail ? data.detail : '';
+  const features = data.features ? data.features.join(', ') : '';
+
+  return `${data.name}
+            ${data.description}
+            ${detail}
+            ${features}
+            ${data.languages}
+            ${data.tools}
+            ${data.build}
+            ${data.year}
+            ${data.status}
+           `.toLowerCase();
+};
 
 const searchProjects = (searchTerm) => {
   const projects = document.getElementsByClassName('project');
@@ -25,6 +43,32 @@ const projectsSpecialSearch = (func, searchTerm) => {
       hideNode(project);
     }
   }
+};
+
+export const findSearchType = (searchTerm) => {
+  if (
+    searchTerm === status.active ||
+    searchTerm === status.archived ||
+    searchTerm === status.retired
+  ) {
+    return SearchType.STATUS;
+  }
+
+  if (langs[searchTerm] != undefined) {
+    return SearchType.LANGUAGE;
+  }
+
+  return SearchType.GENERAL;
+};
+
+const projectStatus = (name, status) => {
+  return projects[name].status == status;
+};
+
+const projectLanguage = (name, language) => {
+  return projects[name].languageList
+    .map((lang) => lang.toLowerCase())
+    .includes(language);
 };
 
 const showNode = (node) => {

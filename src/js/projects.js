@@ -331,7 +331,7 @@ buildProject(foodApi);
 buildProject(dish);
 buildProject(playwords);
 
-const projects = {
+export const projects = {
   [succ.name]: succ,
   [foodApi.name]: foodApi,
   [jsoner.name]: jsoner,
@@ -344,33 +344,6 @@ const projects = {
   [sudoku.name]: sudoku,
   [playwords.name]: playwords,
   [headlineWords.name]: headlineWords,
-};
-
-export const projectData = (name) => {
-  const data = projects[name];
-  const detail = data.detail ? data.detail : '';
-  const features = data.features ? data.features.join(', ') : '';
-
-  return `${data.name}
-            ${data.description}
-            ${detail}
-            ${features}
-            ${data.languages}
-            ${data.tools}
-            ${data.build}
-            ${data.year}
-            ${data.status}
-           `.toLowerCase();
-};
-
-export const projectStatus = (name, status) => {
-  return projects[name].status == status;
-};
-
-export const projectLanguage = (name, language) => {
-  return projects[name].languageList
-    .map((lang) => lang.toLowerCase())
-    .includes(language);
 };
 
 export const projectsList = {
