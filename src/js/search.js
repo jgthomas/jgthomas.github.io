@@ -44,23 +44,11 @@ const searchProjects = (searchTerm) => {
   }
 };
 
-const searchProjectStatus = (searchTerm) => {
+const projectsSpecialSearch = (func, searchTerm) => {
   const projects = document.getElementsByClassName('project');
 
   for (const project of projects) {
-    if (projectStatus(project.id, searchTerm)) {
-      showNode(project);
-    } else {
-      hideNode(project);
-    }
-  }
-};
-
-const searchProjectLanguage = (searchTerm) => {
-  const projects = document.getElementsByClassName('project');
-
-  for (const project of projects) {
-    if (projectLanguage(project.id, searchTerm)) {
+    if (func(project.id, searchTerm)) {
       showNode(project);
     } else {
       hideNode(project);
@@ -117,10 +105,10 @@ const setupSearch = () => {
 
       switch (searchType) {
         case SearchType.STATUS:
-          searchProjectStatus(searchTerm);
+          projectsSpecialSearch(projectStatus, searchTerm);
           break;
         case SearchType.LANGUAGE:
-          searchProjectLanguage(searchTerm);
+          projectsSpecialSearch(projectLanguage, searchTerm);
           break;
         default:
           searchProjects(searchTerm);
