@@ -363,8 +363,8 @@ export const projectData = (name) => {
            `.toLowerCase();
 };
 
-export const projectStatus = (name) => {
-  return projects[name].status;
+export const projectStatus = (name, status) => {
+  return projects[name].status == status;
 };
 
 export const projectLanguage = (name, language) => {

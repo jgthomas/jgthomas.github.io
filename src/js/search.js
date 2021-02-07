@@ -48,7 +48,7 @@ const searchProjectStatus = (searchTerm) => {
   const projects = document.getElementsByClassName('project');
 
   for (const project of projects) {
-    if (projectStatus(project.id) === searchTerm) {
+    if (projectStatus(project.id, searchTerm)) {
       showNode(project);
     } else {
       hideNode(project);
