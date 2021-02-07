@@ -47,11 +47,7 @@ const projectsSpecialSearch = (func, searchTerm) => {
 };
 
 export const findSearchType = (searchTerm) => {
-  if (
-    searchTerm === status.active ||
-    searchTerm === status.archived ||
-    searchTerm === status.retired
-  ) {
+  if (status[searchTerm] != undefined) {
     return SearchType.STATUS;
   }
 
