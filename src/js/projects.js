@@ -367,6 +367,12 @@ export const projectStatus = (name) => {
   return projects[name].status;
 };
 
+export const projectLanguage = (name, language) => {
+  return projects[name].languageList
+    .map((lang) => lang.toLowerCase())
+    .includes(language);
+};
+
 export const projectsList = {
   projects: Object.keys(projects).map((name) => projects[name]),
 };

@@ -1,4 +1,10 @@
-import { projectData, projectStatus, status } from './projects.js';
+import {
+  projectData,
+  projectStatus,
+  projectLanguage,
+  status,
+} from './projects.js';
+import { langs } from './tech.js';
 
 const searchProjects = (searchTerm) => {
   const projects = document.getElementsByClassName('project');
@@ -26,12 +32,28 @@ const searchProjectStatus = (searchTerm) => {
   }
 };
 
+const searchProjectLanguage = (searchTerm) => {
+  const projects = document.getElementsByClassName('project');
+
+  for (const project of projects) {
+    if (projectLanguage(project.id, searchTerm)) {
+      showNode(project);
+    } else {
+      hideNode(project);
+    }
+  }
+};
+
 const isStatusSearch = (searchTerm) => {
   return (
     searchTerm === status.active ||
     searchTerm === status.archived ||
     searchTerm === status.retired
   );
+};
+
+const isLanguageSearch = (searchTerm) => {
+  return langs[searchTerm] != undefined;
 };
 
 const showNode = (node) => {
@@ -76,6 +98,9 @@ const setupSearch = () => {
       } else if (isStatusSearch(searchTerm)) {
         showResetButton();
         searchProjectStatus(searchTerm);
+      } else if (isLanguageSearch(searchTerm)) {
+        showResetButton();
+        searchProjectLanguage(searchTerm);
       } else {
         showResetButton();
         searchProjects(searchTerm);
