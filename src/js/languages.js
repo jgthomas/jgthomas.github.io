@@ -71,7 +71,7 @@ const web = {
     },
   ],
   text: `In addition to allowing me to make things other people can actually <em>see</em>, working with
-  <span class="language-name">${langs.web}</span> really opened up 'API thinking' for me, as a complement to the 'algorithmic thinking' of much of my previous explorations.
+  <span class="language-name">${langs.webTech}</span> really opened up 'API thinking' for me, as a complement to the 'algorithmic thinking' of much of my previous explorations.
   In doing so, it taught me that it was not 'cheating' if I didn't write it all myself, and that enormously powerful things can be created
   by making smart use existing tools and services, linked and chained together.`,
   tooling: [

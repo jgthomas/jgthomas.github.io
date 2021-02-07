@@ -1,6 +1,7 @@
-import { projects, status } from './projects.js';
+import { projects } from './projects.js';
 import SearchType from './searchType.js';
 import { langs } from './tech.js';
+import { status, tags } from './labels.js';
 
 export const projectData = (name) => {
   const data = projects[name];
@@ -58,6 +59,10 @@ export const findSearchType = (searchTerm) => {
     return SearchType.LANGUAGE;
   }
 
+  if (tags[searchTerm] != undefined) {
+    return SearchType.TAGS;
+  }
+
   return SearchType.GENERAL;
 };
 
@@ -69,6 +74,10 @@ const projectLanguage = (name, language) => {
   return projects[name].languageList
     .map((lang) => lang.toLowerCase())
     .includes(language);
+};
+
+const projectTags = (name, tag) => {
+  return projects[name].tags.includes(tag);
 };
 
 const showNode = (node) => {
@@ -124,6 +133,9 @@ const setupSearch = () => {
           break;
         case SearchType.LANGUAGE:
           projectsSpecialSearch(projectLanguage, searchTerm);
+          break;
+        case SearchType.TAGS:
+          projectsSpecialSearch(projectTags, searchTerm);
           break;
         default:
           searchProjects(searchTerm);

@@ -9,7 +9,7 @@ export const langs = {
   sql: 'SQL',
   asm: 'x86-64 Assembly',
   go: 'Go',
-  web: 'Web Tech',
+  webTech: 'Web Tech',
 };
 
 export const tools = {

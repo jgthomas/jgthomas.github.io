@@ -1,6 +1,7 @@
 const SearchType = {
   STATUS: 'status',
   LANGUAGE: 'language',
+  TAGS: 'tags',
   GENERAL: 'general',
 };
 

@@ -1,10 +1,5 @@
 import { langs, tools, build } from './tech.js';
-
-export const status = {
-  active: 'active',
-  archived: 'archived',
-  retired: 'retired',
-};
+import { status, tags } from './labels.js';
 
 const octocat =
   'https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png';
@@ -31,6 +26,7 @@ const succ = {
   buildList: [build.stack, build.travis, build.codecov],
   year: '2019',
   status: status.active,
+  tags: [],
 };
 
 const pyfunctory = {
@@ -44,6 +40,7 @@ const pyfunctory = {
   buildList: [build.poetry, build.travis, build.codecov],
   year: '2017',
   status: status.archived,
+  tags: [],
 };
 
 const sudoku = {
@@ -57,6 +54,7 @@ const sudoku = {
   buildList: [build.emscripten],
   year: '2018',
   status: status.retired,
+  tags: [tags.web],
 };
 
 const headlineWords = {
@@ -70,6 +68,7 @@ const headlineWords = {
   buildList: [build.pip, build.digitalOcean, build.nginx],
   year: '2017',
   status: status.retired,
+  tags: [tags.web],
 };
 
 const piptube = {
@@ -88,6 +87,7 @@ const piptube = {
   buildList: [build.poetry],
   year: '2017',
   status: status.archived,
+  tags: [],
 };
 
 const self = {
@@ -117,6 +117,7 @@ const self = {
   ],
   year: '2019',
   status: status.active,
+  tags: [tags.web],
 };
 
 const calcasm = {
@@ -130,6 +131,7 @@ const calcasm = {
   buildList: [build.make, build.travis],
   year: '2018',
   status: status.archived,
+  tags: [],
 };
 
 const draughts = {
@@ -149,6 +151,7 @@ const draughts = {
   buildList: [build.maven, build.travis],
   year: '2018',
   status: status.archived,
+  tags: [],
 };
 
 const braingame = {
@@ -178,6 +181,7 @@ const braingame = {
   ],
   year: '2020',
   status: status.active,
+  tags: [tags.web],
 };
 
 const emulator = {
@@ -197,6 +201,7 @@ const emulator = {
   buildList: [build.make, build.travis],
   year: '2018',
   status: status.archived,
+  tags: [],
 };
 
 const jsoner = {
@@ -216,6 +221,7 @@ const jsoner = {
   buildList: [build.stack, build.ghactions, build.codecov],
   year: '2020',
   status: status.active,
+  tags: [],
 };
 
 const foodApi = {
@@ -252,6 +258,7 @@ const foodApi = {
   ],
   year: '2021',
   status: status.active,
+  tags: [tags.web],
 };
 
 const dish = {
@@ -269,6 +276,7 @@ const dish = {
   buildList: [build.make, build.travis],
   year: '2019',
   status: status.archived,
+  tags: [],
 };
 
 const playwords = {
@@ -281,6 +289,7 @@ const playwords = {
   buildList: [build.pip, build.digitalOcean, build.nginx],
   year: '2017',
   status: status.retired,
+  tags: [tags.web],
 };
 
 const buildCiLink = (project) => {
