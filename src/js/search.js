@@ -1,34 +1,5 @@
-import {
-  projectData,
-  projectStatus,
-  projectLanguage,
-  status,
-} from './projects.js';
-import { langs } from './tech.js';
-
-const SearchType = {
-  STATUS: 'status',
-  LANGUAGE: 'language',
-  GENERAL: 'general',
-};
-
-Object.freeze(SearchType);
-
-const findSearchType = (searchTerm) => {
-  if (
-    searchTerm === status.active ||
-    searchTerm === status.archived ||
-    searchTerm === status.retired
-  ) {
-    return SearchType.STATUS;
-  }
-
-  if (langs[searchTerm] != undefined) {
-    return SearchType.LANGUAGE;
-  }
-
-  return SearchType.GENERAL;
-};
+import { projectData, projectStatus, projectLanguage } from './projects.js';
+import { SearchType, findSearchType } from './searchType.js';
 
 const searchProjects = (searchTerm) => {
   const projects = document.getElementsByClassName('project');
