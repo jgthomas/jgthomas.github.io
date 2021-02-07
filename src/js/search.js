@@ -6,6 +6,30 @@ import {
 } from './projects.js';
 import { langs } from './tech.js';
 
+const SearchType = {
+  STATUS: 'status',
+  LANGUAGE: 'language',
+  GENERAL: 'general',
+};
+
+Object.freeze(SearchType);
+
+const findSearchType = (searchTerm) => {
+  if (
+    searchTerm === status.active ||
+    searchTerm === status.archived ||
+    searchTerm === status.retired
+  ) {
+    return SearchType.STATUS;
+  }
+
+  if (langs[searchTerm] != undefined) {
+    return SearchType.LANGUAGE;
+  }
+
+  return SearchType.GENERAL;
+};
+
 const searchProjects = (searchTerm) => {
   const projects = document.getElementsByClassName('project');
 
@@ -44,18 +68,6 @@ const searchProjectLanguage = (searchTerm) => {
   }
 };
 
-const isStatusSearch = (searchTerm) => {
-  return (
-    searchTerm === status.active ||
-    searchTerm === status.archived ||
-    searchTerm === status.retired
-  );
-};
-
-const isLanguageSearch = (searchTerm) => {
-  return langs[searchTerm] != undefined;
-};
-
 const showNode = (node) => {
   node.classList.remove('hidden');
 };
@@ -92,18 +104,26 @@ const setupSearch = () => {
     const searchBox = document.getElementById('search-bar');
     searchBox.addEventListener('input', () => {
       const searchTerm = searchBox.value.toLowerCase().trim();
+
       if (!searchTerm) {
         showAllProjects();
         hideResetButton();
-      } else if (isStatusSearch(searchTerm)) {
-        showResetButton();
-        searchProjectStatus(searchTerm);
-      } else if (isLanguageSearch(searchTerm)) {
-        showResetButton();
-        searchProjectLanguage(searchTerm);
-      } else {
-        showResetButton();
-        searchProjects(searchTerm);
+        return;
+      }
+
+      const searchType = findSearchType(searchTerm);
+
+      showResetButton();
+
+      switch (searchType) {
+        case SearchType.STATUS:
+          searchProjectStatus(searchTerm);
+          break;
+        case SearchType.LANGUAGE:
+          searchProjectLanguage(searchTerm);
+          break;
+        default:
+          searchProjects(searchTerm);
       }
     });
 
