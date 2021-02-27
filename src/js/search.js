@@ -22,9 +22,10 @@ const projectData = (name) => {
 
 const projectSearchBy = (func, searchTerm) => {
   const projects = document.getElementsByClassName('project');
+  const filterFunc = buildProjectFilter(func)(searchTerm);
 
   for (const project of projects) {
-    if (func(project.id, searchTerm)) {
+    if (filterFunc(project.id)) {
       showNode(project);
     } else {
       hideNode(project);
@@ -48,21 +49,25 @@ const findSearchType = (searchTerm) => {
   return SearchType.GENERAL;
 };
 
-const projectStatus = (name, status) => {
+const buildProjectFilter = (func) => (searchTerm) => (name) => {
+  return func(searchTerm, name);
+};
+
+const projectStatus = (status, name) => {
   return projects[name].status == status;
 };
 
-const projectLanguage = (name, language) => {
+const projectLanguage = (language, name) => {
   return projects[name].languageList
     .map((lang) => lang.toLowerCase())
     .includes(language);
 };
 
-const projectTags = (name, tag) => {
+const projectTags = (tag, name) => {
   return projects[name].tags.includes(tag);
 };
 
-const projectGeneral = (name, searchTerm) => {
+const projectGeneral = (searchTerm, name) => {
   const projectString = projectData(name);
   return projectString.indexOf(searchTerm) > -1;
 };
