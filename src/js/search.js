@@ -101,7 +101,25 @@ const showAllProjects = () => {
   }
 };
 
-const setupSearch = () => {
+const performSearch = (searchTerm) => {
+  const searchType = findSearchType(searchTerm);
+
+  switch (searchType) {
+    case SearchType.STATUS:
+      projectsSpecialSearch(projectStatus, searchTerm);
+      break;
+    case SearchType.LANGUAGE:
+      projectsSpecialSearch(projectLanguage, searchTerm);
+      break;
+    case SearchType.TAGS:
+      projectsSpecialSearch(projectTags, searchTerm);
+      break;
+    default:
+      searchProjects(searchTerm);
+  }
+};
+
+const setupSearchBox = () => {
   if (document.getElementById('project-page')) {
     const searchForm = document.getElementById('search-form');
     searchForm.addEventListener('submit', (e) => {
@@ -119,23 +137,8 @@ const setupSearch = () => {
         return;
       }
 
-      const searchType = findSearchType(searchTerm);
-
       showResetButton();
-
-      switch (searchType) {
-        case SearchType.STATUS:
-          projectsSpecialSearch(projectStatus, searchTerm);
-          break;
-        case SearchType.LANGUAGE:
-          projectsSpecialSearch(projectLanguage, searchTerm);
-          break;
-        case SearchType.TAGS:
-          projectsSpecialSearch(projectTags, searchTerm);
-          break;
-        default:
-          searchProjects(searchTerm);
-      }
+      performSearch(searchTerm);
     });
 
     const clearButton = document.getElementById('clear-button');
@@ -146,4 +149,4 @@ const setupSearch = () => {
   }
 };
 
-document.addEventListener('DOMContentLoaded', setupSearch);
+document.addEventListener('DOMContentLoaded', setupSearchBox);
