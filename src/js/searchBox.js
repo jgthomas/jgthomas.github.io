@@ -1,4 +1,4 @@
-import { performSearch } from './searchProjects';
+import SearchProjects from './searchProjects';
 
 const displayFilteredProject = (projectIdsToDisplay) => {
   const projectNodes = document.getElementsByClassName('project');
@@ -57,7 +57,7 @@ const setupSearchBox = () => {
 
       showResetButton();
 
-      const projectIdsToDisplay = performSearch(searchTerm);
+      const projectIdsToDisplay = SearchProjects.search(searchTerm);
       displayFilteredProject(projectIdsToDisplay);
     });
 

@@ -69,7 +69,7 @@ const projectGeneral = (searchTerm, project) => {
   return projectString.indexOf(searchTerm) > -1;
 };
 
-export const performSearch = (searchTerm) => {
+const performSearch = (searchTerm) => {
   const searchType = findSearchType(searchTerm);
 
   switch (searchType) {
@@ -84,4 +84,8 @@ export const performSearch = (searchTerm) => {
     default:
       return projectSearchBy(projectGeneral, searchTerm);
   }
+};
+
+export default {
+  search: performSearch,
 };
