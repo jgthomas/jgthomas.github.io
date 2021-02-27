@@ -3,7 +3,7 @@ import SearchType from './searchType.js';
 import { langs } from './tech.js';
 import { status, tags } from './labels.js';
 
-export const projectData = (name) => {
+const projectData = (name) => {
   const data = projects[name];
   const detail = data.detail ? data.detail : '';
   const features = data.features ? data.features.join(', ') : '';
@@ -46,7 +46,7 @@ const projectsSpecialSearch = (func, searchTerm) => {
   }
 };
 
-export const findSearchType = (searchTerm) => {
+const findSearchType = (searchTerm) => {
   if (status[searchTerm] != undefined) {
     return SearchType.STATUS;
   }
