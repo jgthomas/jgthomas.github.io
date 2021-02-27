@@ -1,5 +1,5 @@
 import './js/renderContent.js';
-import './js/search.js';
+import './js/searchBox.js';
 import './scss/index.scss';
 import './scss/projects.scss';
 import './scss/search.scss';
