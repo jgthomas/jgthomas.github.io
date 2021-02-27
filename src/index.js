@@ -2,7 +2,7 @@ import './js/renderContent.js';
 import './js/searchBox.js';
 import './scss/index.scss';
 import './scss/projects.scss';
-import './scss/search.scss';
+import './scss/searchBox.scss';
 import './scss/me.scss';
 import './img/succ.png';
 import './img/sudoku_solver.png';
