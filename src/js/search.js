@@ -1,4 +1,4 @@
-import { projects } from './projects.js';
+import { projects, projectsList } from './projects.js';
 import SearchType from './searchType.js';
 import { langs } from './tech.js';
 import { status, tags } from './labels.js';
@@ -21,14 +21,23 @@ const projectData = (name) => {
 };
 
 const projectSearchBy = (func, searchTerm) => {
-  const projects = document.getElementsByClassName('project');
   const filterFunc = buildProjectFilter(func)(searchTerm);
 
-  for (const project of projects) {
-    if (filterFunc(project.id)) {
-      showNode(project);
+  const filteredProjectIds = projectsList.projects
+    .filter((project) => filterFunc(project))
+    .map((project) => project.name);
+
+  return filteredProjectIds;
+};
+
+const displayFilteredProject = (projectIdsToDisplay) => {
+  const projectNodes = document.getElementsByClassName('project');
+
+  for (const projectNode of projectNodes) {
+    if (projectIdsToDisplay.includes(projectNode.id)) {
+      showNode(projectNode);
     } else {
-      hideNode(project);
+      hideNode(projectNode);
     }
   }
 };
@@ -49,26 +58,26 @@ const findSearchType = (searchTerm) => {
   return SearchType.GENERAL;
 };
 
-const buildProjectFilter = (func) => (searchTerm) => (name) => {
-  return func(searchTerm, name);
+const buildProjectFilter = (func) => (searchTerm) => (project) => {
+  return func(searchTerm, project);
 };
 
-const projectStatus = (status, name) => {
-  return projects[name].status == status;
+const projectStatus = (status, project) => {
+  return project.status == status;
 };
 
-const projectLanguage = (language, name) => {
-  return projects[name].languageList
+const projectLanguage = (language, project) => {
+  return project.languageList
     .map((lang) => lang.toLowerCase())
     .includes(language);
 };
 
-const projectTags = (tag, name) => {
-  return projects[name].tags.includes(tag);
+const projectTags = (tag, project) => {
+  return project.tags.includes(tag);
 };
 
-const projectGeneral = (searchTerm, name) => {
-  const projectString = projectData(name);
+const projectGeneral = (searchTerm, project) => {
+  const projectString = projectData(project.name);
   return projectString.indexOf(searchTerm) > -1;
 };
 
@@ -102,16 +111,13 @@ const performSearch = (searchTerm) => {
 
   switch (searchType) {
     case SearchType.STATUS:
-      projectSearchBy(projectStatus, searchTerm);
-      break;
+      return projectSearchBy(projectStatus, searchTerm);
     case SearchType.LANGUAGE:
-      projectSearchBy(projectLanguage, searchTerm);
-      break;
+      return projectSearchBy(projectLanguage, searchTerm);
     case SearchType.TAGS:
-      projectSearchBy(projectTags, searchTerm);
-      break;
+      return projectSearchBy(projectTags, searchTerm);
     default:
-      projectSearchBy(projectGeneral, searchTerm);
+      return projectSearchBy(projectGeneral, searchTerm);
   }
 };
 
@@ -134,7 +140,9 @@ const setupSearchBox = () => {
       }
 
       showResetButton();
-      performSearch(searchTerm);
+
+      const projectIdsToDisplay = performSearch(searchTerm);
+      displayFilteredProject(projectIdsToDisplay);
     });
 
     const clearButton = document.getElementById('clear-button');
