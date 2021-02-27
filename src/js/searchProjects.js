@@ -79,6 +79,8 @@ export const performSearch = (searchTerm) => {
       return projectSearchBy(projectLanguage, searchTerm);
     case SearchType.TAGS:
       return projectSearchBy(projectTags, searchTerm);
+    case SearchType.GENERAL:
+      return projectSearchBy(projectGeneral, searchTerm);
     default:
       return projectSearchBy(projectGeneral, searchTerm);
   }
