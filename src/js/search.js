@@ -20,21 +20,7 @@ const projectData = (name) => {
            `.toLowerCase();
 };
 
-const searchProjects = (searchTerm) => {
-  const projects = document.getElementsByClassName('project');
-
-  for (const project of projects) {
-    const projectString = projectData(project.id);
-
-    if (projectString.indexOf(searchTerm) > -1) {
-      showNode(project);
-    } else {
-      hideNode(project);
-    }
-  }
-};
-
-const projectsSpecialSearch = (func, searchTerm) => {
+const projectSearchBy = (func, searchTerm) => {
   const projects = document.getElementsByClassName('project');
 
   for (const project of projects) {
@@ -76,6 +62,11 @@ const projectTags = (name, tag) => {
   return projects[name].tags.includes(tag);
 };
 
+const projectGeneral = (name, searchTerm) => {
+  const projectString = projectData(name);
+  return projectString.indexOf(searchTerm) > -1;
+};
+
 const showNode = (node) => {
   node.classList.remove('hidden');
 };
@@ -106,16 +97,16 @@ const performSearch = (searchTerm) => {
 
   switch (searchType) {
     case SearchType.STATUS:
-      projectsSpecialSearch(projectStatus, searchTerm);
+      projectSearchBy(projectStatus, searchTerm);
       break;
     case SearchType.LANGUAGE:
-      projectsSpecialSearch(projectLanguage, searchTerm);
+      projectSearchBy(projectLanguage, searchTerm);
       break;
     case SearchType.TAGS:
-      projectsSpecialSearch(projectTags, searchTerm);
+      projectSearchBy(projectTags, searchTerm);
       break;
     default:
-      searchProjects(searchTerm);
+      projectSearchBy(projectGeneral, searchTerm);
   }
 };
 
