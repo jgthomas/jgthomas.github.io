@@ -18,6 +18,7 @@ import './img/braingame.xyz.png';
 import './img/bluetel_solutions.png';
 import './img/smallBham.png';
 import './img/edinburgh_council.jpg';
+import './img/UoE.jpg';
 import './img/laptop_man.png';
 import './img/codebar.png';
 import './img/jsoner.png';

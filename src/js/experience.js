@@ -51,12 +51,23 @@ const bluetel = {
   role: 'Software Engineer',
 };
 
+const universityEdinburgh = {
+  organisation: 'University of Edinburgh',
+  alt: 'UoE',
+  width: iconWidth,
+  image: `${imagePath}/UoE.jpg`,
+  startDate: '2014',
+  endDate: '2016',
+  role: 'Data using Python and R',
+};
+
 const experience = {
   [bluetel.organisation]: bluetel,
   [codebar.organisation]: codebar,
   [universityBirmingham.organisation]: universityBirmingham,
   [edinburghCouncil.organisation]: edinburghCouncil,
   [selfTeaching.organisation]: selfTeaching,
+  [universityEdinburgh.organisation]: universityEdinburgh,
 };
 
 export const experienceList = {
